@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SAAU,CACX,OAGC,YAAa,CACb,wBAAyB","file":"style.min.css","sourcesContent":["*{\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nheader {\r\n  display: flex;\r\n  background-color: #3C61AD;\r\n}\r\n"]}
