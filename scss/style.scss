@@ -14,6 +14,12 @@
   font-stretch: normal;
 }
 
+@font-face {
+  font-family: Muli;
+  src: url("../src/fonts/Muli/Muli-Black.ttf");
+  font-weight: 900;
+}
+
 .r {
   font-family: Roboto;
 }
@@ -30,6 +36,7 @@
   margin: 0;
   padding: 0;
   font-family: Roboto;
+  line-height: 150%;
 }
 
 .orange {
@@ -57,6 +64,8 @@ ul{
   list-style: none;
 }
 
+
+
 // DECORATION
 
 @mixin WhiteStripes{
@@ -79,9 +88,25 @@ ul{
 }
 
 
+.logo {
+  font-family: Muli;
+}
+.very_big{
+  font-size: 10vw;
+}
+
+.big{
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
 // HEADER SECTION
 header {
   display: flex;
+  position: absolute;
+  width: 100%;
 }
 
 .header_wrapper {
@@ -96,6 +121,11 @@ header {
 }
 .main_menu ul li {
   margin: 0 25px;
+  font-family: Rubik;
+}
+
+.dropbtn{
+  font-family: Rubik;
 }
 
 
@@ -136,9 +166,23 @@ header {
 // MAIN TOP SECTION
 .main_top_wrapper {
   background-color: #171717;
-  background-image: url("../src/img/main/Main-triangle-gradient.png");
+  background-image: url("../src/img/main/Main-triangle-gradient.webp");
   color: white;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_underline {
+  width: 60%;
+  height: 2px;
+  background-color: white;
+}
+
+.main_top_wrapper p:last-child {
+  margin-top: 24px;
 }
 
 
@@ -183,18 +227,43 @@ footer {
           z-index: 0;
         }
       }
+      .footer_triangles{
+        position: absolute;
+        left: -171px;
+
+        img:first-child{
+          transform: rotate(35deg);
+          height: 120px;
+        }
+        img:last-child{
+          transform: rotate(-30deg);
+          height: 60px;
+        }
+      }
     }
 
     .footer_top_right {
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;;
 
       .footer_contacts {
         display: flex;
         justify-content: space-between;
+
+        .f_contacts{
+          display: flex;
+          margin-right: 20px;
+
+          span{
+            margin: 5px 20px 0 0;
+          }
+        }
       }
       .contact_map{
         @include WhiteStripes;
         position: relative;
+        height: 50%;
 
         img {
           position: relative;
@@ -210,7 +279,6 @@ footer {
       }
       .f_mail {
         max-width: 600px;
-        line-height: 150%;
       }
     }
   }
@@ -227,12 +295,20 @@ footer {
 
     .footer_menu{
       text-align: center;
+
+      .footer_copyright {
+        transform: translateY(30px);
+      }
     }
 
     .footer_social{
       display: flex;
       text-align: right;
       align-items: center;
+
+      div{
+        margin-right: 55px;
+      }
 
       .social_wrapper{
         display: flex;

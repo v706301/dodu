@@ -4,6 +4,9 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+const imagemin = require("gulp-imagemin");
+const webp = require("imagemin-webp");
+const extReplace = require("gulp-ext-replace");
 
 
 function f(done) {
@@ -36,6 +39,21 @@ function browserReload(done) {
     browserSync.reload();
     done();
 }
+
+gulp.task("exportWebP", function() {
+    let src = "src/raw img/**/*.png"; // Where your PNGs are coming from.
+    let dest = "src/img"; // Where your WebPs are going.
+
+    return gulp.src(src)
+        .pipe(imagemin([
+            webp({
+                quality: 100,
+                lossless: true
+            })
+        ]))
+        .pipe(extReplace(".webp"))
+        .pipe(gulp.dest(dest));
+});
 
 
 function watchFiles(){
