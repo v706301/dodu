@@ -2,14 +2,194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Advance</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
+<!--HEADER-->
 <header>
     <div class="header_wrapper">
-        <h1>It's works!</h1>
+        <span>Услуги</span>
+        <nav class="main_menu">
+            <ul class="menu_ul">
+                <li class="fs20">Услуги</li>
+                <li class="fs20">
+                    <a href="#" class="dropbtn">Портфолио</a>
+                    <div id="dropdown_wrapper">
+                        <div class="menu_category">
+                            <ul>
+                                <li class="menu_category_bnt1">Брендированная одежда</li>
+                                <li class="menu_category_bnt2">Наружная реклама</li>
+                                <li class="menu_category_bnt3">Широкоформатная печать</li>
+                                <li class="menu_category_bnt4">Оформление интерьеров</li>
+                                <li class="menu_category_bnt">Сувенирная продукция</li>
+                                <li class="menu_category_bnt">Полиграфия</li>
+                                <li class="menu_category_bnt">Корпоративный стиль</li>
+                                <li class="menu_category_bnt">Освещение</li>
+                                <li class="menu_category_bnt">POS Материалы</li>
+                                <li class="menu_category_bnt">Выставочные стенды</li>
+                                <li class="menu_category_bnt">Эксклюзив</li>
+                                <li class="menu_category_bnt">Дополнительные услуги</li>
+                            </ul>
+                        </div>
+                        <div id="menu_subcategory">
+
+                        </div>
+                        <div class="menu_category_img">
+                            <img id="change-image" src="src/img/black.jpg" alt="Black Image" />
+                            <div class="menu_category_img_border"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fs20">Новости</li>
+                <li class="fs20">Контакты</li>
+            </ul>
+        </nav>
+        <div class="menu_tel">
+            <span class="orange">057 761 761 6</span>
+        </div>
     </div>
 </header>
+<!--TOP SECTION-->
+<section class="main_top_wrapper">
+    <p>ADVANCE</p>
+    <p>Разработка и производство рекламы</p>
+</section>
+<!--FOOTER-->
+<footer>
+    <div class="footer_top">
+        <div class="footer_top_left">
+            <div class="footer_form_wrapper">
+                <div class="footer_form">
+
+                </div>
+                <div class="footer_form_border">
+
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="footer_top_right">
+            <div class="footer_contacts">
+                <div class="f_contacts">
+                    <span>
+                        LOC
+                    </span>
+                    <div>
+                        <p class="orange">Наш адрес</p>
+                        <p>Украина, Харьков</p>
+                        <p>ул.Мироносицкаяб 88</p>
+                        <p>61023</p>
+                    </div>
+                </div>
+                <div class="f_contacts">
+                     <span>
+                        Tel
+                    </span>
+                    <div>
+                        <p class="orange">Телефон</p>
+                        <p>Виктория Колесник:</p>
+                        <p>+38(096)761 761 6</p>
+                        <p>Игорь Шорох</p>
+                        <p>+38(050)662 551 1</p>
+                    </div>
+                </div>
+                <div class="f_contacts">
+                    <span>
+                       Gram
+                    </span>
+                    <div>
+                        <p class="orange">Telegram</p>
+                        <p>+3(093)761 761 6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_map">
+                <img src="src/img/black.jpg" alt="Black Image" />
+                <div class="stripes"></div>
+            </div>
+            <div class="f_mail">
+                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте<br> нам запрос и мы свяжемся с вами в течении часа<br>
+                <span class="orange">advanced.kh.ua@gmail.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div>
+            <p>ADVANCE</p>
+        </div>
+        <div class="footer_menu">
+            <div>
+                <div class="footer_nav">
+                    <nav class="main_menu">
+                        <ul class="menu_ul">
+                            <li class="fs20">Услуги</li>
+                            <li class="fs20">Портфолио</li>
+                            <li class="fs20">Новости</li>
+                            <li class="fs20">Контакты</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <div class="footer_copyright">
+                    <p class="r">Copyright &copy; 2019 ADVANCE. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_social">
+            <div>
+                <p class="r">Подписывайся на нас</p>
+                <p class="r">в социальных сетях</p>
+            </div>
+            <div class="social_wrapper">
+                <span>I</span>
+                <span>F</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    jQuery(document).ready(function($){
+
+        $('.dropbtn').on({
+           'click': function () {
+               $('#dropdown_wrapper').css('display', 'flex');
+           }
+        });
+
+        $('.menu_category_bnt1').on({
+            'click': function(){
+                $('#change-image').attr('src','src/img/blue.jpg');
+                $('#menu_subcategory').html('<ul><li>1</li></ul>')
+            }
+        });
+
+        $('.menu_category_bnt2').on({
+            'click': function(){
+                $('#change-image').attr('src','src/img/yellow.jpg');
+                $('#menu_subcategory').html('<ul><li>2</li></ul>')
+            }
+        });
+
+        $('.menu_category_bnt3').on({
+            'click': function(){
+                $('#change-image').attr('src','src/img/red.jpg');
+                $('#menu_subcategory').html('<ul><li>3</li></ul>')
+            }
+        });
+
+        $('.menu_category_bnt4').on({
+            'click': function(){
+                $('#change-image').attr('src','src/img/black.jpg');
+                $('#menu_subcategory').html('<ul><li>4</li></ul>')
+            }
+        });
+    });
+</script>
 </body>
 </html>
