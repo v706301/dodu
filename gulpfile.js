@@ -47,8 +47,8 @@ gulp.task("exportWebP", function() {
     return gulp.src(src)
         .pipe(imagemin([
             webp({
-                quality: 100,
-                lossless: true
+                quality: 90,
+                // lossless: true
             })
         ]))
         .pipe(extReplace(".webp"))
@@ -65,4 +65,5 @@ function watchFiles(){
 
 
 gulp.task('default', gulp.parallel(sync,watchFiles));
+
 
