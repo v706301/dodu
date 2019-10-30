@@ -175,6 +175,19 @@
             <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
             <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
         </div>
+        <div class="main_gallery hidden_g">
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/black.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/blue.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/yellow.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item long"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+            <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
+        </div>
     </div>
     <button class="adv_sm_btn">Показать больше</button>
 </section>
@@ -204,11 +217,8 @@
                                 <label for="f_name">Ваше имя</label><input id="f_name" type="text" >
                             </div>
                             <div>
-
                                 <label for="f_email">Электронная почта</label>
-                                <label>
-                                    <input type="email" id="f_email">
-                                </label>
+                                <input type="email" id="f_email">
                             </div>
                             <div>
                                 <label for="f_message">Сообщение</label>
@@ -310,7 +320,7 @@
 </footer>
 <script>
     jQuery(document).ready(function($){
-
+        // HEADER SUBMENU
         $('.dropbtn').on({
            'click': function () {
                $('.dropdown_wrapper').css('display', 'flex');
@@ -318,6 +328,13 @@
 
            }
         });
+
+        // SHOW GALLERY
+        $('.adv_sm_btn').on({
+            'click': function () {
+                $('.hidden_g ').css('display', 'grid');
+            }
+        })
         $(function ($) {
             $(document).mouseup(function (e) {
                 let div = $('.dropdown_wrapper');
@@ -327,7 +344,7 @@
                     header.css('background-color', 'transparent')
                 }
             })
-        })
+        });
 
 
 

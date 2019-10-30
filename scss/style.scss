@@ -588,11 +588,15 @@ header {
         grid-gap: 15px;
         height: 100%;
         justify-content: space-between;
+        margin-bottom: 15px;
 
         .gallery_item img {
           width: 100%;
           height: 100%;
         }
+      }
+      .hidden_g {
+        display: none;
       }
       .long {
         grid-row: span 2;
