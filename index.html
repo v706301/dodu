@@ -176,7 +176,7 @@
             <div class="gallery_item"><img class="change-image" data-lazy="src/img/red.jpg" alt="Black Image" /></div>
         </div>
     </div>
-    <button>SHOW MORE</button>
+    <button class="adv_sm_btn">Показать больше</button>
 </section>
 
 <!--FOOTER-->
@@ -185,24 +185,38 @@
         <div class="footer_top_left">
             <div class="footer_form_wrapper">
                 <div class="footer_form">
-                    <p class="bigger_center">Напишите нам</p>
-                    <p>Свяжитесь с нашими специалистами и получите консультацию по любому интересующему вас вопросу.
-                    </p>
-                    <form>
-                        <label for="f_theme">Тематика вашего обращения</label>
-                        <select id="f_theme">
-                            <option value="value1">Значение 1</option>
-                            <option value="value2" selected>Значение 2</option>
-                            <option value="value3">Значение 3</option>
-                        </select>
-                        <lebel for="f_name">Ваше имя</lebel>
-                        <input id="f_name" type="text" >
-                        <lebel for="f_email">Электронная почта</lebel>
-                        <input type="email">
-                        <lebel for="f_message">Сообщение</lebel>
-                        <textarea></textarea>
-                        <input type="submit" value="Отправить">
-                    </form>
+                    <div class="form_container">
+                        <p class="bigger_center">Напишите нам</p>
+                        <p>Свяжитесь с нашими специалистами и получите консультацию по любому интересующему вас вопросу.
+                        </p>
+                    </div>
+                    <div class="form_container">
+                        <form>
+                            <div>
+                                <label for="f_theme">Тематика вашего обращения</label>
+                                <select id="f_theme">
+                                    <option value="value1">Значение 1</option>
+                                    <option value="value2" selected>Значение 2</option>
+                                    <option value="value3">Значение 3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="f_name">Ваше имя</label><input id="f_name" type="text" >
+                            </div>
+                            <div>
+
+                                <label for="f_email">Электронная почта</label>
+                                <label>
+                                    <input type="email" id="f_email">
+                                </label>
+                            </div>
+                            <div>
+                                <label for="f_message">Сообщение</label>
+                                <textarea id="f_message" rows="5" cols="33"></textarea>
+                            </div>
+                            <button type="submit"  class="adv_btn fs20 f_btn">Отправить</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="footer_form_border">
 
@@ -328,7 +342,7 @@
 
         $('.menu_category_bnt1').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/blue.jpg');
+                $('.change-image').attr('data-lazy','src/img/blue.jpg');
                 $('.menu_subcategory').html('<ul><li>Футболки</li><li>Сумки и рюкзаки</li><li>Униформа</li><li>Флисовые кофты</li><li>Кепки и бейсболки</li><li>Жилетки и куртки</li><li>Фартуки</li></ul>')
             }
         });
@@ -349,42 +363,42 @@
 
         $('.menu_category_bnt4').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/black.jpg');
+                $('.change-image').attr('data-lazy','src/img/black.jpg');
                 $('.menu_subcategory').html('<ul><li>Системы визуальной навигации</li><li>Стойки Ресепшн</li><li>Световой логотип</li><li>Системы освещения</li><li>Изготовление фотозон</li><li>Уголки покупателя</li><li>Изготовление часов</li><li>Оформление витрин</li><li>Оформление торгового зала</li><li>Стенды для образцов</li><li>Информационный стенд</li><li>Буквы из пенопласта</li><li>Рекламные конструкции</li><li>Оформление стеклянных перегородок</li></ul>')
             }
         });
 
         $('.menu_category_bnt5').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/blue.jpg');
+                $('.change-image').attr('data-lazy','src/img/blue.jpg');
                 $('.menu_subcategory').html('<ul><li>Ручки</li><li>Аксессуары </li><li>Антистрессы</li><li>Брелки</li><li>Флаги и флажки</li><li>ЭКО изделия из дерева и фанеры</li><li>Воздушные шары</li><li>Пакеты и упаковка</li><li>Чашки и посуда</li><li>Флешки и PowerBank</li><li>Ароматизаторы в автомобиль</li><li>Магниты</li><li>Зонты</li><li>Изготовление часов</li><li>Шоколадки</li><li>Значки</li><li>Дисконтные карты/удостоверения</li><li>Ежедневники</li></ul>')
             }
         });
 
         $('.menu_category_bnt6').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/blue.jpg');
+                $('.change-image').attr('data-lazy','src/img/blue.jpg');
                 $('.menu_subcategory').html('<ul><li>Визитки</li><li>Буклеты/Лифлеты/листовки</li><li>Ежедневники</li><li>Блокноты</li><li>Каталоги и брошюры</li><li>Упаковка</li><li>Плакаты</li><li>Календари</li></ul>')
             }
         });
 
         $('.menu_category_bnt7').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/blue.jpg');
+                $('.change-image').attr('data-lazy','src/img/blue.jpg');
                 $('.menu_subcategory').html('<ul><li>Разработка корпоративного стиля</li><li>Брендирование транспорта</li><li>Полиграфия</li><li>Сувенирная продукция</li><li>Брендбук</li><li>Упаковка</li><li>Оформление выставок</li></ul>')
             }
         });
 
         $('.menu_category_bnt8').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/blue.jpg');
+                $('.change-image').attr('data-lazy','src/img/blue.jpg');
                 $('.menu_subcategory').html('<ul><li>Люстры</li><li>Световые короба (Лайтбоксы)</li><li>Архитектурная подсветка</li><li>Освещение витрин</li></ul>')
             }
         })
 
         $('.menu_category_bnt9').on({
             'click': function(){
-                $('.change-image').attr('src','src/img/yellow.jpg');
+                $('.change-image').attr('data-lazy','src/img/yellow.jpg');
                 $('.menu_subcategory').html('<ul><li>Топперы</li><li>Воблеры</li><li>Изделия из акрила и оргстекла</li><li>Подставки под товар</li><li>Шелфтокеры</li><li>Стопперы</li><li>Холдеры</li></ul>')
             }
         })

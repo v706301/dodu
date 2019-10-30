@@ -88,6 +88,34 @@ img {
   transition: all 500ms;
 }
 
+.adv_btn {
+  background-color: orangered;
+  padding: 20px 55px;
+  border: none;
+  color: white;
+}
+
+.adv_sm_btn {
+  background-color: transparent;
+  border: none;
+  color: orangered;
+  font-size: 18px;
+  margin-top: 3vh;
+}
+.adv_sm_btn::after {
+  content: url(../src/img/main/r_arrow.svg);
+  transform: rotateX(10deg);
+  position: relative;
+  bottom: -1px;
+  left: 5px;
+
+}
+
+
+.f_btn{
+  width: 200px;
+}
+
 .active {
   color: orangered;
 }
@@ -603,7 +631,33 @@ color: white;
         position: relative;
         z-index: 1;
         color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
       }
+
+      .form_container{
+        padding: 0 20%;
+      }
+
+      .footer_form form{
+        display: flex;
+        flex-direction: column;
+
+
+        div {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 2vh;
+        }
+        input{
+          height: 3vh;
+        }
+        select {
+          height: 4vh;
+        }
+      }
+
       .footer_form_border{
         @include OrangeGradient;
         width: 620px;
