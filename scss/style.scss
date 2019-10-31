@@ -74,9 +74,12 @@ ul{
 }
 
 img {
-
   opacity: 0;
   transition: all 500ms;
+}
+
+img:not([src]),img[src=""] {
+  display: none;
 }
 
 
@@ -93,6 +96,7 @@ img {
   padding: 20px 55px;
   border: none;
   color: white;
+  font-size: 20px;
 }
 
 .adv_sm_btn {
@@ -108,9 +112,10 @@ img {
   position: relative;
   bottom: -1px;
   left: 5px;
-
 }
-
+.adv_sm_btn:focus{
+  outline: none;
+}
 
 .f_btn{
   width: 200px;
@@ -163,7 +168,8 @@ img {
 .xxx1,
 .xxx2,
 .xxx3,
-.xxx4{
+.xxx4,
+.xxx5{
   box-sizing: border-box;
   position: relative;
   //width: 90%;
@@ -207,6 +213,13 @@ xxx1_1 {
   margin: 0 10rem;
 }
 
+.xxx5 {
+  border-bottom: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0 2rem 0;
+}
+
 
 /*line on top/right*/
 .xxx1::before {
@@ -223,7 +236,7 @@ xxx1_1 {
   transform: translateX(100%)rotate(39deg)
 }
 
-.xxx2::before {
+.xxx2::before, .xxx5::before {
   content: attr(data-label);
   box-sizing: border-box;
   position: absolute;
@@ -232,6 +245,17 @@ xxx1_1 {
   transform: translateX(-50%) translateY(-55%);
   padding: .5rem 12rem;
   background: #fff
+}
+
+.xxx5::after {
+  content: attr(data-label);
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1px solid orangered;
+  height: 125px;
+  transform: translate(-2px, 125px);
 }
 
 .logo {
@@ -295,6 +319,11 @@ header {
   font-family: Rubik;
 }
 
+.m_li:hover {
+  color: orangered;
+  transition: all 500ms;
+}
+
 .dropbtn{
   font-family: Rubik;
   position: relative;
@@ -308,6 +337,12 @@ header {
   border-style: solid;
   border-width: 9px 7px 0 7px;
   border-color: #ffffff transparent transparent transparent;
+}
+
+.dropbtn:hover:after {
+  content: '';
+  border-color: orangered transparent transparent transparent;
+  transition: all 500ms;
 }
 
 
@@ -338,6 +373,9 @@ header {
   .menu_category_img {
     position: relative;
   }
+  .menu_subcategory  ul li{
+    font-size: 16px;
+  }
 
   .change-image {
     position: relative;
@@ -353,6 +391,10 @@ header {
     z-index: 0;
     @include OrangeGradient;
   }
+}
+
+.menu_subcategory  ul li:hover {
+  color: orangered;
 }
 
 
@@ -393,6 +435,7 @@ header {
 .main_service_container {
   background-color: #171717;
   position: relative;
+  height: 95vh;
 
   .service_triangles{
     position: absolute;
@@ -448,7 +491,7 @@ header {
   .menu_service_img{
     @include WhiteStripes;
     position: relative;
-    transform: translateY(260px);
+    transform: translateY(100px);
 
     img {
       z-index: 1;
@@ -514,16 +557,57 @@ header {
 
   .main_how_we_work_top {
     display: flex;
+    position: relative;
     background: #171717;
     padding: 5em 0;
 
+    .triangles{
+      position: absolute;
+      top: 0;
+      right: 0;
 
+      img:first-child{
+        width: 31px;
+        transform: translate(100px, -15px)rotate(75deg);
+      }
+      img:last-child{
+        width: 121px;
+        transform: translate(35px, -60px)rotate(20deg);
+      }
+    }
+
+    .how_we_work_left {
+      position: relative;
+
+      .triangles2{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(60%);
+
+        img:first-child{
+          width: 82px;
+          transform: translate(-25px, 10px)rotate(45deg);
+      }
+        img:nth-child(2){
+          width: 40px;
+          transform: translate(25px, 10px) rotate(45deg);
+        }
+        img:nth-child(3){
+          width: 65px;
+          transform: translate(-10px,10px) rotate(45deg);
+        }
+      }
+    }
 
     .how_we_work_right {
         position: relative;
         transform: translate(77px, -80px);
         border-right: 2px solid orangered;
         height: 30em;
+        min-width: 600px;
 
         img{
           position: relative;
@@ -576,11 +660,15 @@ header {
     align-items: center;
     border-right: none;
 
+
     .why_we_slogan {
       transform: translateY(-25px)
     }
     .main_our_works_img_wrapper{
+      display: flex;
+      flex-direction: column;
       width: 100%;
+      margin: 5vh 0;
       .main_gallery {
         display: grid;
         grid-template-columns: repeat(4, 368px);
@@ -597,6 +685,9 @@ header {
       }
       .hidden_g {
         display: none;
+      }
+      .visible_g{
+        display: grid;
       }
       .long {
         grid-row: span 2;
@@ -691,8 +782,19 @@ color: white;
   .footer_top_right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;;
+    justify-content: space-around;
+    position: relative;
 
+    .footer_triangles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(185px, -75px)rotate(30deg);
+
+      img{
+        width: 150px;
+      }
+    }
     .footer_contacts {
       display: flex;
       justify-content: space-between;
