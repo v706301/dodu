@@ -8,23 +8,7 @@ jQuery(document).ready(function($){
         }
     });
 
-    // SHOW GALLERY
-    // $('.adv_sm_btn').on({
-    //     'click': function () {
-    //         $('.hidden_g ').css('display', 'grid');
-    //         $('.adv_sm_btn').html('Скрыть');
-    //     }
-    // });
-
-    $(".adv_sm_btn").click(function () {
-        let $button = $(this); // Нажатая кнопка
-        let $cont = $button.siblings('.main_gallery'); // Элемент .cont рядом с кнопкой
-        $cont.toggleClass('visible_g').toggleClass('hidden_g');
-        $button.text($button.text() === "Показать больше" ? "Закрыть": "Открыть");
-    });
-
-
-
+    // Header dropdown hide
     $(function ($) {
         $(document).mouseup(function (e) {
             let div = $('.dropdown_wrapper');
@@ -36,8 +20,6 @@ jQuery(document).ready(function($){
         })
     });
 
-
-
     $(function () {
         $(".menu_category ul li").click(function (e) {
             e.preventDefault();
@@ -46,7 +28,29 @@ jQuery(document).ready(function($){
         })
     });
 
+    // Active menu
+    $(function () {
+        let location = window.location.href;
+        $('.main_menu li a').toArray().forEach(function(el) {
+            let link = $(el).prop('href');
+            if (location === link) {
+                $(el).addClass('active2');
+            }
 
+        });
+
+
+    });
+
+    // Show more button
+    $(".adv_sm_btn").click(function () {
+        let $button = $(this);
+        let $cont = $button.siblings('.main_gallery');
+        $cont.toggleClass('visible_g').toggleClass('hidden_g');
+        $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
+    });
+
+    // Category/image switcher
     $('.menu_category_bnt1').on({
         'click': function(){
             $('.change-image').attr('src','src/img/blue.jpg');
