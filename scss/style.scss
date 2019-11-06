@@ -406,6 +406,9 @@ header {
   width: 100%;
 }
 
+.logo:hover {
+  color: #e9150b;
+}
 
 .header_wrapper {
   display: flex;
@@ -1360,6 +1363,10 @@ height: 200px;
   .menu_service_img{
     transform: none;
   }
+}
+
+.category_fix2 {
+  background-color: #171717;
 }
 
 // FOOTER
