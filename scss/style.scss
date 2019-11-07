@@ -273,7 +273,6 @@ xxx1_1 {
   border-left: none;
   border-bottom: none;
   margin-bottom: 0;
-
   padding: 5rem 5rem 0 0;
 }
 
@@ -301,7 +300,7 @@ xxx1_1 {
   border: 1px solid orangered;
   bottom: 0;
   left: -2px;
-  height: 100px;
+  height: 100%;
   width: 0;
   transform: translateY(85%);
 }
@@ -361,9 +360,34 @@ xxx1_1 {
   border: 1px solid orangered;
   top: 0;
   left: -2px;
-  height: 60%;
+  height: 100%;
   width: 0;
   transform: translateY(-20%);
+}
+
+.xxx7::after{
+  content: '';
+  background-image: none;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid orangered;
+  bottom: 0;
+  left: -2px;
+  height: 100%;
+  width: 0;
+  transform: translateY(100%)
+}
+.xxx8::before {
+  content: "";
+  background-image: none;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid orangered;
+  bottom: 0;
+  right: -2px;
+  height: 60%;
+  width: 0;
+  transform: translateY(55%);
 }
 
 .logo {
@@ -371,6 +395,7 @@ xxx1_1 {
 }
 .very_big{
   font-size: 10vw;
+  font-family: Muli;
 }
 
 .big{
@@ -640,6 +665,26 @@ header {
       z-index: 0;
   }
 }
+  .menu_service_img::before{
+    content: "";
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    z-index: 0;
+    height: 262px;
+    width: 262px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 12px);
+  }
+  .menu_service_img::after {
+    content: "";
+    background-image: linear-gradient(to bottom, #ff5b00 11%, #f4511e 46%, #fd3304 79%, #e9150b 99%);
+    width: 423px;
+    height: 423px;
+    position: absolute;
+    bottom: -135px;
+    left: -50px;
+    z-index: 0;
+  }
 
   .main_service_bottom_container{
     height: 200px;
@@ -1346,6 +1391,9 @@ height: 200px;
     height: 200px;
   }
 }
+.sub_service_container {
+  position: relative;
+}
 
 
 .adb_slider {
@@ -1390,6 +1438,7 @@ height: 200px;
 
 .category_fix2 {
   background-color: #171717;
+  height: 100vh;
 }
 
 // Carousel
@@ -1559,6 +1608,7 @@ height: 200px;
       position: relative;
       justify-content: space-between;
       width: 100%;
+      height: 40vh;
 
       div {
         flex-basis: auto;
@@ -1690,7 +1740,6 @@ position: relative;
   }
 }
 .contact_map{
-  @include WhiteStripes;
   position: relative;
   height: 50%;
 
@@ -1698,14 +1747,16 @@ position: relative;
     position: relative;
     z-index: 1;
   }
-
-  div{
-    position: relative;
-    bottom: 230px;
-    left: 375px;
-    z-index: 0;
-  }
 }
+  .contact_map:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    height: 262px;
+    width: 262px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 12px);
+  }
 .f_mail {
   max-width: 600px;
 }
