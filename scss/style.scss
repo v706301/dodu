@@ -1626,6 +1626,25 @@ height: 200px;
     }
 }
 
+//CONTACTS PAGE
+  .contacts {
+    background-color: white;
+    color: black;
+
+    .about_us_top {
+
+      .about_us_right::before{
+        display: none;
+      }
+      .about_us_right:after {
+        width: 365px;
+        height: 365px;
+        top: 55px;
+        right: 360px;
+      }
+    }
+ }
+
 // FOOTER
 
 footer {
