@@ -49,6 +49,13 @@ jQuery(document).ready(function($){
         $cont.toggleClass('visible_g').toggleClass('hidden_g');
         $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
     });
+    // Blog buttons
+    $(".s_m").click(function () {
+        let $button = $(this);
+        let $cont = $button.siblings('.more_posts');
+        $cont.toggleClass('visible_g').toggleClass('hidden_g');
+        // $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
+    });
 
     // Category/image switcher
     $('.menu_category_bnt1').on({

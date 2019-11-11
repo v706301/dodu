@@ -37,6 +37,21 @@
   letter-spacing: normal;
 }
 
+.fs20_r {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  font-family: Rubik;
+  font-weight: bold;
+}
+
+.fs36_r{
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  font-family: Rubik;
+  font-weight: bold;
+}
 
 
 // GENERAL SETTINGS
@@ -201,12 +216,14 @@ input:focus, select:focus, textarea:focus {
 
 .xxx1,
 .xxx2,
+.xxx2_2,
 .xxx3,
 .xxx4,
 .xxx5,
 .xxx6,
 .xxx7,
-.xxx8 {
+.xxx8,
+.xxx9{
   box-sizing: border-box;
   position: relative;
   //width: 90%;
@@ -222,18 +239,19 @@ input:focus, select:focus, textarea:focus {
   padding-bottom: 0;
 }
 
-xxx1_1 {
-  border-right: none;
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .xxx2 {
   border-left: none;
   border-bottom: none;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0 0 2rem 0;
+}
+
+.xxx2_2 {
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  margin: 10rem 15rem 0;
   padding: 0 0 2rem 0;
 }
 
@@ -275,7 +293,11 @@ xxx1_1 {
   margin-bottom: 0;
   padding: 5rem 5rem 0 0;
 }
-
+.xxx9 {
+  border-left: none;
+  margin: 5rem 15rem;
+  padding: 5rem 8rem 2rem;
+}
 
 
 /*line on top/right*/
@@ -330,7 +352,7 @@ xxx1_1 {
   transform: translateY(100%);
 }
 
-.xxx2::before, .xxx5::before {
+.xxx2::before, .xxx5::before, .xxx2_2::before {
   content: attr(data-label);
   box-sizing: border-box;
   position: absolute;
@@ -388,6 +410,32 @@ xxx1_1 {
   height: 60%;
   width: 0;
   transform: translateY(55%);
+}
+.xxx9::before {
+  content: '';
+  background-image: url(../src/img/footer/Triangle.svg);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-65%) rotate(10deg);
+}
+.xxx9::after {
+  content: '';
+  background-image: url(../src/img/footer/Triangle.svg);
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  transform: translateX(-100%) rotate(55deg);
 }
 
 .logo {
@@ -1623,6 +1671,140 @@ height: 200px;
     }
  }
 
+// BLOG PAGE
+.blog_wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 135vh;
+}
+.post_container {
+  p{
+    width: 65%;
+  }
+  p:last-child {
+    margin-top: 15vh;
+  }
+  .fs20_r {
+   margin:  65px 0 30px;
+  }
+
+}
+
+.blog {
+
+  .blog_top_container {
+    display: flex;
+    position: relative;
+
+    .triangles{
+      position: absolute;
+      right: 80px;
+      display: flex;
+      flex-direction: column;
+
+      img:first-child{
+        width: 93px;
+        transform: rotate(45deg) translateY(40px);
+      }
+      img:last-child{
+        width: 25px;
+        transform: translateY(50px);
+      }
+    }
+  }
+
+  .blog_title {
+     margin-top: 120px;
+     width: 50%;
+  }
+  .fs36_r{
+    margin-left: 23rem;
+  }
+  .xxx1{
+    margin: 5rem 15rem 2rem;
+    padding: 5rem 8rem 2rem;
+  }
+
+  .xxx1::after {
+    height: 0;
+  }
+}
+
+  .blog_top_img_container{
+    margin-top: 30px;
+    position: relative;
+
+    img {
+      z-index: 1;
+      position: relative;
+    }
+  }
+  .blog_top_img_container::after{
+    content: '';
+    background-image: linear-gradient(to bottom, #ff5b00 11%, #f4511e 46%, #fd3304 79%, #e9150b 99%);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -50px;
+    right: -145px;
+    width: 565px;
+    height: 565px;
+    z-index: 0;
+  }
+
+.other_posts{
+  .hidden_g {
+    display: none;
+  }
+  .visible_g{
+    display: flex;
+  }
+  .why_we_slogan {
+    transform: translateY(-35px);
+  }
+}
+
+.post_heading{
+  margin: 20px 0;
+}
+
+.more_posts {
+  display: flex;
+  flex-basis: 33%;
+  justify-content: space-around;
+  margin: 5rem 15rem;
+
+  .post_wrapper{
+    display: flex;
+    flex-direction: column;
+
+    img{
+      width: 99%;
+    }
+  }
+}
+.post_link {
+  background-color: transparent;
+  border: none;
+  color: orangered;
+  font-size: 18px;
+  margin-top: 3vh;
+}
+
+.post_link:after{
+  content: "";
+  background-image: url(../src/img/main/r_arrow.svg);
+  background-size: 10px 10px;
+  box-sizing: border-box;
+  transform: rotate(0deg);
+  height: 10px;
+  width: 10px;
+  position: relative;
+  bottom: 0;
+  left: 9px;
+  display: inline-block;
+}
 // FOOTER
 
 footer {
