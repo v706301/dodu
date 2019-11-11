@@ -10,18 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Advance</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script defer src="src/script/lazy.js"></script>
-    <script defer src="src/script/main.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
 <!--HEADER-->
 <header>
     <div class="header_wrapper">
@@ -56,7 +44,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="fs20 m_li"><a href="portfolio.html" class="m_li">Портфолио</a></li>
+                <li class="fs20 m_li">Портфолио</li>
                 <li class="fs20 m_li"><a href="about-us.html" class="m_li">О нас</a></li>
                 <li class="fs20 m_li"><a href="news.html" class="m_li">Новости</a></li>
                 <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
@@ -70,131 +58,69 @@
 <!--HEADER END-->
 <div class="header_fix">
 </div>
-<section class="news_wrapper">
-    <div class="category_container subcategory_fix blog">
-    <div class="blog_top_container">
-        <div>
-            <p class="fs36_r white">Свежие новости</p>
+<section class="portfolio_wrapper">
+    <div class="category_container blog portfolio">
+        <div class="blog_top_container">
+            <div>
+                <p class="fs36_r white">Наши работы</p>
+            </div>
+            <div class="triangles">
+                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+            </div>
         </div>
-        <div class="triangles">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-        </div>
-    </div>
-    <div class="xxx1">
-        <div class="last_news">
-            <div class="last_container">
-                <div>
-                    <p class="fs36_r">Title Lorem ipsum </p>
-                    <span>14 August 88</span>
+        <div class="xxx1">
+            <div class="tab_control_container" id="tab_control">
+                    <button class="btn active2" onclick="filterSelection('brand')">Брендированная одежда</button>
+                    <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                    <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                    <button class="btn" onclick="filterSelection('exclusive')">Эксклюзив</button>
+            </div>
+            <div class="works_container">
+                <div class="works_wrapper brand">
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
                 </div>
-                <div class="news_preview">
-                    <p class="fs20_r">Subtitle</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
+                <div class="works_wrapper exclusive">
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/2.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
                 </div>
-                <a href="#" class="post_link">Читать дальше</a>
             </div>
-            <img data-lazy="src/img/blog/blog1.png" src="/" alt="decoration">
-        </div>
-        <div class="last_news_bottom">
-            <span class="fs36_r">Все новости</span>
-        </div>
-    </div>
-    </div>
-</section>
-<section class="other_posts">
-    <div class="more_posts">
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/2.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/2.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-    </div>
-    <div class="more_posts hidden_g">
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-        <div class="post_wrapper">
-            <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
-            <div class="post_heading">
-                <p class="fs20_r">Title Lorem ipsum dolor sit ame</p>
-                <span>14 August 88</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
-            <a href="#" class="post_link">Читать дальше</a>
-        </div>
-    </div>
-    <div class="main_why_we xxx2_2 s_m">
-        <div>
-            <button class="why_we_slogan adv_btn s_m">Больше новостей</button>
         </div>
     </div>
 </section>
-
+<section class="portfolio_bottom">
+    <div class="left">
+        <span class="fs48_r">Итория про член</span>
+        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна.</p>
+    </div>
+    <div class="right">
+        <img data-lazy="src/img/portfolio/p1.png" src="/" alt="decoration">
+    </div>
+</section>
 <footer>
     <div class="footer_top">
         <div class="footer_top_left">
