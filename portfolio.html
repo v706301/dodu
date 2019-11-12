@@ -72,7 +72,6 @@
         <div class="xxx1">
             <div class="tab_control_container">
                     <button class="btn" onclick="openCategory(event,'c_brand')">Брендированная одежда</button>
-                    <button class="btn" onclick="openCategory(event,'c_polygraphy')">Полиграфия</button>
                     <button class="btn" onclick="openCategory(event,'c_test')">Широкоформатная печать</button>
                     <button class="btn" onclick="openCategory(event,'c_exclusive1')">Сувенирная продукция</button>
                     <button class="btn" onclick="openCategory(event,'c_exclusive1')">Корпоративный стиль</button>
@@ -86,13 +85,16 @@
                 <button class="btn" onclick="openCategory(event,'c_exclusive1')">Дополнительные Услуги</button>
                 <button class="btn" onclick="openCategory(event,'c_test')">POS Материалы</button>
             </div>
-<!--            <div class="tab_control_container" >-->
-<!--                <button class="btn" onclick="openCategory(event,'c_exclusive1')">Эксклюзив</button>-->
-<!--            </div>-->
             <div class="works_container">
                 <div class="works_wrapper category" id="c_brand">
-                    <div class="img_wrapper">
+                    <div class="img_wrapper" onclick="openModal();currentSlide(1)">
                         <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                        <div class="p_overlay">
+                            <div>
+                                <span>Название и описание</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="img_wrapper">
                         <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
@@ -148,6 +150,35 @@
             </div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img data-lazy="src/img/blog/1.png" src="/"  style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img data-lazy="src/img/blog/2.png" src="/" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img data-lazy="src/img/blog/3.png" src="/" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img data-lazy="src/img/blog/1.png" src="/" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+        </div>
+    </div>
 </section>
 <section class="portfolio_bottom">
     <div class="p_top">
@@ -181,6 +212,44 @@
         document.getElementById(categoryName).style.display = "flex";
         evt.currentTarget.className += " active2";
     }
+    // Modal gallery
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        // var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active3", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        // dots[slideIndex-1].className += " active3";
+        // captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
 </script>
 <footer>
     <div class="footer_top">
