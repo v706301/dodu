@@ -38,8 +38,6 @@ jQuery(document).ready(function($){
             }
 
         });
-
-
     });
 
     // Show more button
@@ -51,9 +49,9 @@ jQuery(document).ready(function($){
     });
     // Blog buttons
     $(".s_m").click(function () {
-        let $button = $(this);
-        let $cont = $button.siblings('.more_posts');
-        $cont.toggleClass('visible_g').toggleClass('hidden_g');
+        let $button1 = $(this);
+        let $cont1 = $button1.siblings('.more_posts');
+        $cont1.toggleClass('visible_g').toggleClass('hidden_g');
         // $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
     });
 
