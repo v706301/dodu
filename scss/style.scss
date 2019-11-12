@@ -132,6 +132,10 @@ input:focus, select:focus, textarea:focus {
   transition: all 500ms;
 }
 
+.btn{
+  padding:5px 15px;
+}
+
 .adv_btn {
   background-color: orangered;
   padding: 20px 55px;
@@ -1718,11 +1722,20 @@ height: 200px;
     }
   }
   .tab_control_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
     .btn{
       color: white;
       border: none;
       background-color: transparent;
       outline: none;
+      font-size: 18px;
+      font-family: Rubik;
+    }
+    .btn:hover {
+      color: #e9150b;
     }
     .active2{
       color: #e9150b;

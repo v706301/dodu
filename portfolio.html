@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="fs20 m_li">Портфолио</li>
+                <li class="fs20 m_li"><a href="portfolio.html" class="m_li">Портфолио</a></li>
                 <li class="fs20 m_li"><a href="about-us.html" class="m_li">О нас</a></li>
                 <li class="fs20 m_li"><a href="news.html" class="m_li">Новости</a></li>
                 <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
@@ -70,14 +70,27 @@
             </div>
         </div>
         <div class="xxx1">
-            <div class="tab_control_container" id="tab_control">
-                    <button class="btn active2" onclick="filterSelection('brand')">Брендированная одежда</button>
-                    <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-                    <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-                    <button class="btn" onclick="filterSelection('exclusive')">Эксклюзив</button>
+            <div class="tab_control_container">
+                    <button class="btn" onclick="openCategory(event,'c_brand')">Брендированная одежда</button>
+                    <button class="btn" onclick="openCategory(event,'c_polygraphy')">Полиграфия</button>
+                    <button class="btn" onclick="openCategory(event,'c_test')">Широкоформатная печать</button>
+                    <button class="btn" onclick="openCategory(event,'c_exclusive1')">Сувенирная продукция</button>
+                    <button class="btn" onclick="openCategory(event,'c_exclusive1')">Корпоративный стиль</button>
+                    <button class="btn" onclick="openCategory(event,'c_exclusive1')">Наружная реклама</button><br>
+<!--                !!!!-->
+                <button class="btn" onclick="openCategory(event,'c_brand')">Оформление интерьеров</button>
+                <button class="btn" onclick="openCategory(event,'c_polygraphy')">Полиграфия</button>
+                <button class="btn" onclick="openCategory(event,'c_test')">Освещение</button>
+                <button class="btn" onclick="openCategory(event,'c_exclusive1')">Выставочные стенды</button>
+                <button class="btn" onclick="openCategory(event,'c_exclusive1')">Эксклюзив</button>
+                <button class="btn" onclick="openCategory(event,'c_exclusive1')">Дополнительные Услуги</button>
+                <button class="btn" onclick="openCategory(event,'c_test')">POS Материалы</button>
             </div>
+<!--            <div class="tab_control_container" >-->
+<!--                <button class="btn" onclick="openCategory(event,'c_exclusive1')">Эксклюзив</button>-->
+<!--            </div>-->
             <div class="works_container">
-                <div class="works_wrapper brand">
+                <div class="works_wrapper category" id="c_brand">
                     <div class="img_wrapper">
                         <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
                     </div>
@@ -97,7 +110,31 @@
                         <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
                     </div>
                 </div>
-                <div class="works_wrapper exclusive">
+<!--                CATEGORY-->
+                <div class="works_wrapper category" id="c_polygraphy" style="display: none">
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                </div>
+<!--                END-->
+                <div class="works_wrapper category" id="c_test" style="display: none">
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/3.png" src="/" alt="decoration">
+                    </div>
+                    <div class="img_wrapper">
+                        <img data-lazy="src/img/blog/1.png" src="/" alt="decoration">
+                    </div>
+                </div>
+                <div class="works_wrapper category" id="c_exclusive1" style="display: none">
                     <div class="img_wrapper">
                         <img data-lazy="src/img/blog/2.png" src="/" alt="decoration">
                     </div>
@@ -129,6 +166,22 @@
         </div>
     </div>
 </section>
+<script>
+    // Portfolio tabs
+    function openCategory(evt, categoryName) {
+        var i, x, btns;
+        x = document.getElementsByClassName("category");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        btns = document.getElementsByClassName("btn");
+        for (i = 0; i < x.length; i++) {
+            btns[i].className = btns[i].className.replace(" active2", "");
+        }
+        document.getElementById(categoryName).style.display = "flex";
+        evt.currentTarget.className += " active2";
+    }
+</script>
 <footer>
     <div class="footer_top">
         <div class="footer_top_left">
