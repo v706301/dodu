@@ -138,6 +138,7 @@ input:focus, select:focus, textarea:focus {
   border: none;
   color: white;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .adv_sm_btn {
@@ -146,6 +147,7 @@ input:focus, select:focus, textarea:focus {
   color: orangered;
   font-size: 18px;
   margin-top: 3vh;
+  cursor: pointer;
 }
 
 
@@ -1167,6 +1169,7 @@ height: 200px;
         background-color: orangered;
         box-shadow: 2px 0 25px rgba(16, 16, 16, 0.25);
         border: none;
+        cursor: pointer;
       }
       .sbtn-left {
         transform: translateX(-15px);
@@ -1362,6 +1365,10 @@ height: 200px;
   .category_top_container{
     @include F_R;
     position: relative;
+
+    .xxx1::after{
+      transform: translateY(59%);
+    }
 
     .category_top_triangles {
       position: absolute;
@@ -2028,6 +2035,7 @@ height: 200px;
     display: flex;
     flex-direction: column;
     flex-basis: 33%;
+    margin: 35px 0;
 
     img{
       width: 99%;
