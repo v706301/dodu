@@ -993,7 +993,7 @@ header {
       height: 30em;
       min-width: 600px;
       width: 50%;
-      transform: translate(30%,-30%);
+      transform: translate(35%,-30%);
       img{
         position: relative;
         z-index: 1;
@@ -1745,15 +1745,60 @@ height: 200px;
 
 .portfolio_bottom {
   display: flex;
-  margin: 0 15rem;
-  transform: translateY(32%);
-  .left *{
-    width: 75%;
-  }
+  flex-direction: column;
+  //margin: 0 15rem;
+  transform: translateY(28%);
+  //.left *{
+  //  width: 75%;
+  //}
+  .p_top {
+    span {
+      margin-left: 21rem;
+    }
+    .triangles {
+      position: absolute;
+      left: 150px;
+      display: flex;
+      flex-direction: column;
 
+      img:first-child{
+        width: 55px;
+        transform: rotate(31deg) translate(18px, 24px);
+      }
+      img:last-child{
+        width: 25px;
+        transform: translate(10px, 45px) rotate(-79deg);
+      }
+    }
+  }
+  .p_bottom{
+    display: flex;
+    .xxx1 {
+      margin: 5rem 0 0 15rem;
+      padding: 2rem 0 0;
+      border-right: none;
+      border-bottom: none ;
+      border-left: none;
+    }
+    .xxx1::before {
+      left: 0;
+      transform: translateX(-105%)rotate(225deg);
+    }
+    .xxx1::after {
+      border: none;
+    }
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    p {
+      width: 70%;
+    }
+  }
   .right {
     position: relative;
     z-index: 2;
+    margin-right: 15rem;
 
     img {
       position: relative;
@@ -1766,7 +1811,7 @@ height: 200px;
     background-repeat: no-repeat;
     box-sizing: border-box;
     position: absolute;
-    top: -50px;
+    top: -51px;
     right: -50px;
     width: 550px;
     height: 540px;
