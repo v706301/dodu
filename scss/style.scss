@@ -68,6 +68,7 @@
   padding: 0;
   font-family: Roboto;
   line-height: 150%;
+  //box-sizing: border-box;
 }
 
 body {
@@ -640,7 +641,7 @@ header {
 .service_wrapper{
   display: flex;
   color: white;
-
+  height: 50vh;
   div{
     flex-basis: 33%;
   }
@@ -779,6 +780,19 @@ header {
   }
 }
 
+.main_why_we::after{
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid orangered;
+  bottom: 0;
+  right: -2px;
+  height: 100%;
+  width: 0;
+  transform: translateY(23%);
+  z-index: 1;
+}
+
 
 
 //  HOW WE WORK SECTION
@@ -841,7 +855,7 @@ header {
 
     .how_we_work_right {
         position: relative;
-        transform: translate(77px, -80px);
+        transform: translate(77px, 0);
         border-right: 2px solid orangered;
         height: 30em;
         min-width: 600px;
@@ -1269,10 +1283,13 @@ height: 200px;
     align-items: center;
 
     *{
-      width: 50%;
+      width: 60%;
     }
     div {
       margin: 25px 0;
+      p {
+        padding: 5px 0;
+      }
     }
   }
   .vacancy-right {
