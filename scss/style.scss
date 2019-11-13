@@ -1382,7 +1382,9 @@ height: 200px;
   @include F_C;
   color: white;
 
-
+  .category_container .xxx1::after {
+    transform: translateY(25%);
+  }
   .category_top_container{
     @include F_R;
     position: relative;
@@ -2245,6 +2247,7 @@ footer {
 display: flex;
 flex-direction: column;
 color: white;
+  overflow-x: hidden;
 
 
 
@@ -2262,7 +2265,8 @@ margin-top: 150px;
 
   .footer_form {
     width: 620px;
-    height: 761px;
+    //height: 761px;
+    padding: 4rem 0;
     box-shadow: 4px 0 20px 0 rgba(16, 16, 16, 0.2);
     background-color: #ffffff;
     margin-top: 50px;
@@ -2417,4 +2421,86 @@ div{
 }
 }
 }
+}
+
+//         MEDIA
+@media only screen and (max-width: 1680px) {
+
+  //Main page
+
+  .main_service_wrapper .main_service_top_container .main_top_triangles {
+    img:first-child{
+      width: 100px;
+      transform: translate(0, 20px);
+    }
+    img:last-child {
+      width: 25px;
+      transform: translate(20px, 50px) rotate(45deg);
+    }
+  }
+  .main_how_we_work .main_how_we_work_top .how_we_work_right {
+    border: none;
+    transform: translate(-40px, 0);
+  }
+  .main_how_we_work .main_how_we_work_top .triangles {
+    img:last-child {
+      width: 121px;
+      transform: translate(0px, -60px);
+    }
+  }
+  .main_why_we::after {
+    transform: translateY(26%);
+  }
+  .main_our_works .main_our_works_img_wrapper .main_gallery{
+    grid-template-columns: repeat(4, 330px);
+    grid-template-rows: repeat(3, 220px);
+  }
+  .main_service_wrapper .menu_service_img {
+    position: relative;
+    transform: translate(100px, 100px);
+  }
+
+  // Portfilio
+  .portfolio_wrapper .portfolio .xxx1 {
+    margin: 5rem 8rem 2rem;
+  }
+  .certificate_wrapper .certificate .gallery_item img {
+    width: 340px;
+    height: 505px;
+  }
+
+  //News
+  .news_wrapper .last_news_bottom {
+    margin-top: 30vh;
+  }
+
+  //News blog page
+  .blog_top_img_container img{
+    width: 100%;
+  }
+  .blog_wrapper {
+    height: 105vh;
+  }
+
+  //Category
+  .category_wrapper .category_container .xxx1::after {
+    transform: translateY(25%);
+  }
+
+    //Subcategory page
+  .category_wrapper .slogan_wrapper .category_slogan{
+    width: 45%;
+  }
+  .slogan_wrapper .subcategory_img_container::before {
+    right: -100px;
+  }
+  .slogan_wrapper .subcategory_img_container::after {
+    width: 450px;
+  }
+  .sub_service_wrapper .service_wrapper .menu_category {
+    width: 20%;
+  }
+  .xxx8::before {
+    transform: translateY(50%);
+  }
 }
