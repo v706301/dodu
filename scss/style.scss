@@ -92,7 +92,7 @@ a{
 }
 
 p {
-  font-size: 18px;
+  font-size: 0.9375vw;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -596,6 +596,16 @@ header {
     position: relative;
     z-index: 1;
   }
+  .menu_category_img::after {
+    content: "";
+    height: 380px;
+    width: 500px;
+    position: absolute;
+    top: 55px;
+    left: 160px;
+    z-index: 0;
+    background-image: linear-gradient(to top, #ff5b00 11%, #f4511e 46%, #fd3304 79%, #e9150b 99%);
+  }
 
   .menu_category_img_border {
     height: 380px;
@@ -619,6 +629,7 @@ header {
   background-color: #171717;
   background-image: url("../src/img/main/Main-triangle-gradient.webp");
   background-repeat: no-repeat;
+  background-position-x: center;
   color: white;
   height: 105vh;
   display: flex;
@@ -807,7 +818,7 @@ header {
     display: flex;
     position: relative;
     background: #171717;
-    padding: 5em 0;
+    padding: 4em 0;
 
     .triangles{
       position: absolute;
@@ -826,9 +837,15 @@ header {
 
     .how_we_work_left {
       position: relative;
-
+      width: 50%;
+      .xxx1{
+        margin: 5rem 0 5rem 10rem;
+      }
       .xxx1::after{
         border: none;
+      }
+      .xxx1::before{
+        display: none;
       }
       .triangles2{
         position: absolute;
@@ -855,15 +872,15 @@ header {
 
     .how_we_work_right {
         position: relative;
-        transform: translate(77px, 0);
-        border-right: 2px solid orangered;
+        transform: translate(0, -15px);
         height: 30em;
         min-width: 600px;
+        width: 50%;
 
         img{
           position: relative;
           z-index: 1;
-          transform: translate(-40px, 120px);
+          transform: translate(0, 120px);
 
         }
     }
@@ -876,7 +893,7 @@ header {
       width: 170px;
       height: 170px;
       top: 90px;
-      left: -10px;
+      left: 110px;
       z-index: 1;
     }
     .how_we_work_right:after{
@@ -887,7 +904,7 @@ header {
       box-sizing: border-box;
       position: absolute;
       bottom: -80px;
-      right: -15px;
+      right: 150px;
       width: 580px;
       height: 510px;
       z-index: 0;
@@ -2441,7 +2458,10 @@ div{
   }
   .main_how_we_work .main_how_we_work_top .how_we_work_right {
     border: none;
-    transform: translate(-40px, 0);
+    transform: translate(0, 0);
+  }
+  .main_how_we_work .main_how_we_work_top .how_we_work_right:after {
+    right: 10%;
   }
   .main_how_we_work .main_how_we_work_top .triangles {
     img:last-child {
@@ -2450,7 +2470,7 @@ div{
     }
   }
   .main_why_we::after {
-    transform: translateY(26%);
+    transform: translateY(23%);
   }
   .main_our_works .main_our_works_img_wrapper .main_gallery{
     grid-template-columns: repeat(4, 330px);
@@ -2528,8 +2548,10 @@ div{
     width: 325px;
     height: 300px;
   }
-
-
+  .main_our_works .main_our_works_img_wrapper .main_gallery {
+    grid-template-columns: repeat(4, 310px);
+    grid-template-rows: repeat(3, 210px);
+  }
   .main_service_container .xxx1::after {
     content: '';
     box-sizing: border-box;
@@ -2576,5 +2598,165 @@ div{
   //Contacts
   .contacts .xxx1 .about_us_center .about_us_right:after {
     right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+
+  //Header
+  .dropdown_wrapper {
+    padding: 45px 5rem;
+
+    div:nth-child(1) {
+      flex-basis: 25%;
+    }
+    div:nth-child(2) {
+      flex-basis: 30%;
+    }
+    div:nth-child(3) {
+      flex-basis: 45%;
+    }
+    .change-image {
+      transform: translateX(-10%);
+    }
+  }
+
+
+  //MAIN PAGE
+  .main_top_wrapper {
+    height: 115vh;
+  }
+
+  .main_service_wrapper .main_service_top_container .main_top_triangles {
+    position: absolute;
+    right: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu_category_img {
+    transform: translateX(-10%);
+  }
+  .main_service_wrapper .menu_service_img {
+    transform: translate(45px, 194px);
+    width: 400px;
+  }
+
+  .main_service_wrapper .menu_service_img::before {
+    right: -45%;
+  }
+  .main_service_wrapper .menu_service_img::after {
+    width: 385px;
+    height: 330px;
+    bottom: 10px;
+  }
+
+  .main_why_we .why_we_wrapper .why_container {
+    width: 290px;
+    height: 280px;
+    margin: 25px;
+  }
+  .main_service_wrapper .menu_service_img img {
+    width: 550px;
+  }
+  .main_how_we_work .main_how_we_work_top .how_we_work_right {
+    img{
+      width: 570px;
+      height: 475px;
+    }
+  }
+  .main_how_we_work .main_how_we_work_top .how_we_work_right:after {
+    bottom: -63px;
+  }
+  .main_our_works .main_our_works_img_wrapper .main_gallery {
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(3, 190px);
+  }
+
+
+  //BLOG
+  .blog_wrapper {
+    height: 129vh;
+  }
+  .blog .xxx1 {
+    margin: 5rem 8rem 2rem;
+    padding: 5rem 8rem 2rem;
+  }
+  .news_wrapper .last_news img {
+    right: -12%;
+  }
+
+  .xxx9 {
+    margin: 5rem 8rem;
+    padding: 5rem 8rem 2rem;
+  }
+
+  .more_posts {
+    margin: 0 8rem;
+  }
+  //About us page
+  .certificate_wrapper .certificate .gallery_item img {
+    width: 280px;
+    height: 430px;
+  }
+  .vacancy_wrapper .vacancy-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    transform: translateX(-10%);
+  }
+  .vacancy_wrapper .vacancy-right:after {
+    right: -72px;
+  }
+
+  //Portfolio
+  .works_container .works_wrapper .img_wrapper {
+    width: 390px;
+    margin: 1.5px 0;
+  }
+  .portfolio_wrapper .portfolio .triangles {
+    left: 5px;
+  }
+  .portfolio_bottom .p_top span {
+    margin-left: 12rem;
+  }
+  .portfolio_bottom .p_bottom .xxx1 {
+    margin: 5rem 0 0 8rem;
+  }
+  .portfolio_bottom .right {
+    margin-right: 8rem;
+  }
+  .portfolio_bottom .p_top .triangles {
+    left: 35px;
+  }
+
+  //Subcategory
+  .slogan_wrapper .subcategory_img_container div img {
+    width: 265px;
+    height: 190px;
+  }
+  .slogan_wrapper .subcategory_img_container::before {
+    right: -40px;
+    top: -85px;
+  }
+  .sub_service_wrapper .menu_service_img img {
+    width: 500px;
+  }
+  .sub_service_wrapper .service_wrapper .menu_service_img {
+    width: 45%;
+  }
+  .sub_service_wrapper .service_wrapper .menu_category {
+    width: 23%;
+  }
+  .xxx8::before {
+    transform: translateY(60%);
+  }
+  //FOOTER
+  footer .footer_top .footer_top_left .footer_triangles {
+    position: absolute;
+    left: -35px;
+    bottom: -15px;
   }
 }
