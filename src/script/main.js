@@ -20,13 +20,13 @@ jQuery(document).ready(function($){
         })
     });
 
-    $(function () {
-        $(".menu_category ul li").click(function (e) {
-            e.preventDefault();
-            $(".menu_category ul li").removeClass('active');
-            $(this).addClass('active');
-        })
-    });
+    // $(function () {
+    //     $(".menu_category ul li").click(function (e) {
+    //         e.preventDefault();
+    //         $(".menu_category ul li").removeClass('active');
+    //         $(this).addClass('active');
+    //     })
+    // });
 
     // Active menu
     $(function () {
@@ -56,8 +56,13 @@ jQuery(document).ready(function($){
     });
 
     // Category/image switcher
+
+
+
+
+
     $('.menu_category_bnt1').on({
-        'click': function(){
+        'mouseover': function(){
             $('.change-image').attr('src','src/img/blue.jpg');
             $('.menu_subcategory').html('<ul><li>Футболки</li><li>Сумки и рюкзаки</li><li>Униформа</li><li>Флисовые кофты</li><li>Кепки и бейсболки</li><li>Жилетки и куртки</li><li>Фартуки</li></ul>')
         }

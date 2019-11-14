@@ -57,7 +57,7 @@
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 2.5vw;
   line-height: 57px;
 }
 
@@ -571,7 +571,7 @@ header {
   left: 0;
   top: 98px;
   padding: 45px 15rem;
-  z-index: 2;
+  z-index: 5;
 
 
   div:nth-child(1) {
@@ -2215,6 +2215,9 @@ height: 200px;
   .why_we_slogan {
     transform: translateY(-35px);
   }
+  .xxx2_2:after{
+    display: none;
+  }
 }
 
 .post_heading{
@@ -2481,7 +2484,7 @@ div{
     transform: translate(100px, 100px);
   }
 
-  // Portfilio
+  // Portfolio
   .portfolio_wrapper .portfolio .xxx1 {
     margin: 5rem 8rem 2rem;
   }
@@ -2506,6 +2509,9 @@ div{
   .news_wrapper .last_news_bottom {
     margin-top: 30vh;
   }
+  .news_wrapper .subcategory_fix{
+    margin-bottom: 40vh;
+  }
 
   //News blog page
   .blog_top_img_container img{
@@ -2513,6 +2519,16 @@ div{
   }
   .blog_wrapper {
     height: 105vh;
+  }
+  .blog .xxx1 {
+    padding: 5rem 8rem 2rem 0rem;
+  }
+  .news_wrapper .last_news .last_container {
+    background-color: white;
+    padding: 5rem;
+    position: relative;
+    z-index: 2;
+    width: 47%;
   }
 
   .blog .fs36_r {
@@ -2577,9 +2593,6 @@ div{
   }
 
   //News
-  .news_wrapper .subcategory_fix {
-    margin-bottom: 40vh;
-  }
 
   //Blog page
   .blog_wrapper {
@@ -2686,6 +2699,9 @@ div{
   .news_wrapper .last_news img {
     right: -12%;
   }
+  .xxx2_2 {
+    margin: 10rem 8rem 0;
+  }
 
   .xxx9 {
     margin: 5rem 8rem;
@@ -2758,5 +2774,46 @@ div{
     position: absolute;
     left: -35px;
     bottom: -15px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  //MAIN
+  .main_top_wrapper{
+    background-size: contain;
+  }
+
+    //About us
+  .certificate_wrapper .certificate .gallery_item img {
+    width: 260px;
+    height: 370px;
+  }
+  .about_us_callback {
+    height: 85vh;
+  }
+  .vacancy_wrapper .vacancy-right:after {
+    right: -69px;
+  }
+  .vacancy_wrapper {
+    transform: translateY(25%);
+  }
+
+  //Blog page
+  .post_container {
+    transform: translateY(7%);
+  }
+  .blog_top_img_container::after {
+    height: 500px;
+  }
+
+  //Subcategory
+  .sub_service_wrapper .service_wrapper {
+    height: 55vh;
+  }
+  .xxx8::before {
+    transform: translateY(50%);
+  }
+  .sub_service_wrapper .menu_service_img img {
+    width: 425px;
   }
 }
