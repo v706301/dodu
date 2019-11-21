@@ -1,4 +1,41 @@
 jQuery(document).ready(function($){
+
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop && st > navbarHeight){
+
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastScrollTop = st;
+    }
+
     // HEADER SUBMENU
     $('.dropbtn').on({
         'click': function () {
@@ -7,21 +44,13 @@ jQuery(document).ready(function($){
 
         }
     });
-    // $('.dropbtn2').on({
-    //     'click': function () {
-    //         $('.dropdown_container').slideToggle();
-    //     }
-    // });
 
     $(document).ready(function() {
-        //прикрепляем клик по заголовкам acc-head
         $('.dropbtn2').on('click', f_drpd);
     });
 
     function f_drpd(){
-//скрываем все кроме того, что должны открыть
         $('.dropdown_container').not($(this).next()).slideUp(500);
-// открываем или скрываем блок под заголовком, по которому кликнули
         $(this).next().slideToggle(500);
     }
 

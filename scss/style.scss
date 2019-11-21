@@ -503,10 +503,14 @@ input:focus, select:focus, textarea:focus {
 // HEADER SECTION
 header {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  transition: top 0.2s ease-in-out;
 }
-
+.nav-up {
+  top: -100px;
+}
 .logo:hover {
   color: #e9150b;
 }
@@ -954,8 +958,8 @@ header {
       margin: 5vh 0;
       .main_gallery {
         display: grid;
-        grid-template-columns: repeat(4, 368px);
-        grid-template-rows: repeat(3, 245px);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-gap: 15px;
         height: 100%;
         justify-content: space-between;
