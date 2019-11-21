@@ -4238,4 +4238,52 @@ div{
     height: 700px;
     width: 80px;
   }
+  .sub_service_wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .main_service_wrapper .menu_service_img {
+    max-width: 320px;
+  }
+  .main_service_wrapper .menu_service_img::before {
+    right: 0;
+  }
+  .main_service_wrapper .menu_service_img::after {
+    left: 0;
+  }
+  .main_top_wrapper p:last-child {
+    margin-top: 24px;
+    text-align: center;
+  }
+  .main_how_we_work .main_how_we_work_top .triangles img:last-child {
+    display: block;
+    width: 25px;
+    transform: translate(0px, -30px) rotate(20deg);
+  }
+  .portfolio_bottom .right img {
+    width: 275px;
+  }
+  .about_us .about_us_center .about_us_right img {
+    width: 300px;
+    height: 200px;
+  }
+  .about_us .about_us_center .about_us_right {
+    min-width: 320px;
+  }
+  .main_our_works {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+  .blog .blog_top_container .triangles {
+    display: none;
+  }
+  footer .footer_bottom .footer_social div p {
+    font-size: 10px;
+  }
+  .slogan_wrapper .subcategory_img_container div img {
+    width: 250px;
+    height: 180px;
+  }
 }
