@@ -7,6 +7,23 @@ jQuery(document).ready(function($){
 
         }
     });
+    // $('.dropbtn2').on({
+    //     'click': function () {
+    //         $('.dropdown_container').slideToggle();
+    //     }
+    // });
+
+    $(document).ready(function() {
+        //прикрепляем клик по заголовкам acc-head
+        $('.dropbtn2').on('click', f_drpd);
+    });
+
+    function f_drpd(){
+//скрываем все кроме того, что должны открыть
+        $('.dropdown_container').not($(this).next()).slideUp(500);
+// открываем или скрываем блок под заголовком, по которому кликнули
+        $(this).next().slideToggle(500);
+    }
 
     // Header dropdown hide
     $(function ($) {
@@ -56,9 +73,6 @@ jQuery(document).ready(function($){
     });
 
     // Category/image switcher
-
-
-
 
 
     $('.menu_category_bnt1').on({
