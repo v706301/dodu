@@ -502,6 +502,7 @@ input:focus, select:focus, textarea:focus {
 
 // HEADER SECTION
 header {
+  z-index: 12;
   display: flex;
   position: fixed;
   width: 100%;
@@ -1327,6 +1328,14 @@ height: 200px;
       p {
         padding: 5px 0;
       }
+    }
+  }
+  .vacancy_block {
+    .vacancy_item{
+      display: none;
+      width: 100%;
+      color: white;
+      font-size: 16px;
     }
   }
   .vacancy-right {
