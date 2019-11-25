@@ -512,6 +512,9 @@ header {
 .nav-up {
   top: -100px;
 }
+.nav-down {
+  background-color: #171717;
+}
 .logo:hover {
   color: #e9150b;
 }
@@ -1873,9 +1876,7 @@ height: 200px;
     top: 0;
   }
 
-  img {
-    margin-bottom: 4px;
-  }
+
 
   .caption-container {
     text-align: center;

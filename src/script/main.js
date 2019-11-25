@@ -30,6 +30,7 @@ jQuery(document).ready(function($){
 
             if(st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
+                $('.dropdown_wrapper').slideUp(500);
             }
         }
 
