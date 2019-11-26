@@ -199,11 +199,19 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+.t_btn:hover{
+  cursor: pointer;
+}
+.t_btn:hover::after{
+  left: 10px;
+  transition: all 500ms;
+}
 .t_btn:after{
   content: url(../src/img/main/r_arrow.svg);
   position: relative;
   bottom: -1px;
   left: 5px;
+  transition: all 500ms;
 }
 
 @mixin WhiteStripes{
@@ -3299,6 +3307,9 @@ div{
   }
   .mob_menu {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   .dropdown_container {
     display: none;
@@ -4012,7 +4023,7 @@ div{
   }
   .service_wrapper {
     padding: 2em 25px;
-    height: 120vh;
+    height: 100%;
   }
 
   .main_service_wrapper .mobile_category_menu{
@@ -4027,7 +4038,7 @@ div{
     display: none;
   }
   .main_service_container {
-    height: 120vh;
+    height: 100%;
   }
   .service_wrapper div {
     flex-basis: 100%;
@@ -4045,6 +4056,8 @@ div{
     display: flex;
     justify-content: center;
     max-width: 375px;
+    position: relative;
+    margin: 20% 0;
   }
   .main_service_wrapper .menu_service_img::before {
     right: 10%;
@@ -4107,7 +4120,7 @@ div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 100%;
   }
   .main_how_we_work .main_how_we_work_top .how_we_work_right:after {
     top: 0;
@@ -4214,6 +4227,9 @@ div{
      height: 200px;
      right: 0;
    }
+  .about_us_callback {
+    height: 100%;
+  }
   .about_us .about_us_center .about_us_right img {
     width: 325px;
     height: 215px;
@@ -4384,7 +4400,7 @@ div{
     flex-direction: column;
   }
   .news_wrapper .subcategory_fix {
-    height: 130vh;
+    height: 103vh;
   }
   .blog .xxx1 {
     margin: 0;
@@ -4433,7 +4449,7 @@ div{
     margin: 25px 0;
   }
   .bp {
-    height: 50vh;
+    height: 25vh;
   }
   .blog_wrapper.slogan_wrapper {
    margin: 0 25px;
@@ -4445,7 +4461,7 @@ div{
     bottom: -20px;
   }
   .blog_wrapper {
-    height: 100vh;
+    height: 80vh;
   }
   .blog .blog_title {
     margin-top: 60px;

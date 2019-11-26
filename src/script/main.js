@@ -104,6 +104,12 @@ jQuery(document).ready(function($){
         $cont1.toggleClass('visible_g').toggleClass('hidden_g');
         // $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
     });
+    //Vacancy buttons
+    $('.t_btn').click(function () {
+        let $vbtn = $(this);
+        let $vcont =$vbtn.siblings('.vacancy_item');
+        $vcont.slideToggle(500);
+    })
 
     // Category/image switcher
 
