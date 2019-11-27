@@ -41,8 +41,8 @@ jQuery(document).ready(function($){
     $('.dropbtn').on({
         'click': function () {
             $('.dropdown_wrapper').slideToggle(500).css('display', 'flex');
-            $('.header_wrapper').css('background-color', 'rgba(23,23,23,1)')
-
+            $('.header_wrapper').css('background-color', 'rgba(23,23,23,1)');
+            $(this).toggleClass('arrowDown arrowUp');
         }
     });
 
@@ -96,6 +96,7 @@ jQuery(document).ready(function($){
         let $cont = $button.siblings('.main_gallery');
         $cont.toggleClass('visible_g').toggleClass('hidden_g');
         $button.text($button.text() === "Показать больше" ? "Закрыть": "Показать больше");
+        $(this).toggleClass('adv_sm_btn adv_sm_btn2');
     });
     // Blog buttons
     $(".s_m").click(function () {

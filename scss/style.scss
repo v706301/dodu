@@ -146,7 +146,7 @@ input:focus, select:focus, textarea:focus {
   cursor: pointer;
 }
 
-.adv_sm_btn {
+.adv_sm_btn,.adv_sm_btn2 {
   background-color: transparent;
   border: none;
   color: orangered;
@@ -155,8 +155,7 @@ input:focus, select:focus, textarea:focus {
   cursor: pointer;
 }
 
-
-.adv_sm_btn::after {
+.adv_sm_btn::after, .adv_sm_btn2::after {
   content: "";
   background-image: url(../src/img/main/r_arrow.svg);
   background-size: 10px 10px;
@@ -169,27 +168,24 @@ input:focus, select:focus, textarea:focus {
   left: 9px;
   display: inline-block;
 }
-.adv_sm_btn:focus{
+.adv_sm_btn2::after{
+  transform: rotate(-90deg);
+}
+.adv_sm_btn:focus ,.adv_sm_btn2:focus {
   outline: none;
 }
-
 .f_btn{
   width: 200px;
 }
-
 .active {
   color: orangered;
 }
-
 .active:after{
   content: url("../src/img/main/r_arrow.svg");
   position: relative;
   bottom: -1px;
   left: 5px;
 }
-
-
-
 .triangle {
   width: 0;
   height: 0;
@@ -197,8 +193,6 @@ input:focus, select:focus, textarea:focus {
   border-width: 9px 7px 0 7px;
   border-color: #ffffff transparent transparent transparent;
 }
-
-
 .t_btn:hover{
   cursor: pointer;
 }
@@ -564,7 +558,7 @@ header {
   position: relative;
 }
 
-.dropbtn::after{
+.arrowDown::after, .arrowUp::after{
   content: '';
   position: absolute;
   bottom: 5px;
@@ -580,6 +574,9 @@ header {
   transition: all 500ms;
 }
 
+.arrowUp::after{
+  transform: rotate(180deg);
+}
 
 // DROPDOWN
 .dropdown_wrapper {
@@ -808,6 +805,7 @@ header {
     display: flex;
     .why_container{
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -815,6 +813,10 @@ header {
       width: 360px;
       height: 312px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+
+      img{
+        margin-bottom: 35px;
+      }
     }
   }
 }
@@ -984,9 +986,11 @@ header {
       }
       .hidden_g {
         display: none;
+        transition: all 500ms;
       }
       .visible_g{
         display: grid;
+        transition: all 500ms;
       }
       .long {
         grid-row: span 2;
@@ -1249,6 +1253,7 @@ height: 200px;
         text-align: center;
         padding: 5rem 0;
         position: relative;
+        transition: all 500ms;
 
         p {
           position: relative;
@@ -1261,7 +1266,7 @@ height: 200px;
         content: url("../src/img/about/quote.webp") ;
         position: absolute;
         top: -10%;
-        left: -10%;;
+        left: -10%;
       }
       .reviews p:after {
         content: url("../src/img/about/quote1.webp") ;
