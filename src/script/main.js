@@ -114,6 +114,204 @@ jQuery(document).ready(function($){
     })
 
     // Category/image switcher
+    const catList = {
+        // Брендированная одежда
+        btn_m: {
+            src:'src/img/blue.jpg',
+            links: {
+                'uniform.html': 'Футболки',
+                'test1': 'Сумки и рюкзаки',
+                'test2': 'Униформа',
+                'test3': 'Флисовые кофты',
+                'test4': 'Кепки и бейсболки',
+                'test5': 'Жилетки и куртки',
+                'test6': 'Фартуки'
+            }
+        },
+        // Наружная реклама
+        btn_m1: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Объёмные буквы',
+                'test2': 'Вывески',
+                'test3': 'Крышные конструкции',
+                'test5': 'Лайтбоксы/Световые короба',
+                'test6': 'Оформление витрин',
+                'test7': 'Обшивка фасада композитом',
+                'test11': 'Информационные таблички',
+                'test111': 'Оформление входных групп и козырьков',
+                'test1111': 'Рекламные конструкции',
+                'test22': 'Брендирование транспорта',
+                'test222': 'Уличные флажные конструкции',
+                'test2222': 'LED Дисплеи'
+            }
+        },
+        // Широкоформатная печать
+        btn_m2: {
+            src:'src/img/red.jpg',
+            links: {
+                'test1': 'Печать на баннере',
+                'test2': 'Печать на пленке',
+                'test3': 'Печать на баннерной сетке',
+                'test5': 'Печать на холсте',
+                'test6': 'Печать на бумаге',
+            }
+        },
+        // Оформление интерьеров
+        btn_m3: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Системы визуальной навигации',
+                'test2': 'Стойки Ресепшн',
+                'test3': 'Световой логотип',
+                'test5': 'Системы освещения',
+                'test6': 'Изготовление фотозон',
+                'test7': 'Уголки покупателя',
+                'test11': 'Изготовление часов',
+                'test111': 'Оформление витрин',
+                'test1111': 'Оформление торгового зала',
+                'test22': 'Стенды для образцов',
+                'test222': 'Информационный стенд',
+                'test2222': 'Буквы из пенопласта',
+                'test33': 'Рекламные конструкции',
+                'test3333': 'Оформление стеклянных перегородок',
+            }
+        },
+        // Сувенирная продукция
+        btn_m4: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Ручки',
+                'test2': 'Аксессуары',
+                'test3': 'Антистрессы',
+                'test5': 'Брелки',
+                'test6': 'Флаги и флажки',
+                'test7': 'ЭКО изделия из дерева и фанеры',
+                'test11': 'Воздушные шары',
+                'test111': 'Пакеты и упаковка',
+                'test1111': 'Чашки и посуда',
+                'test22': 'Флешки и PowerBank',
+                'test222': 'Ароматизаторы в автомобиль',
+                'test2222': 'Магниты',
+                'test33': 'Зонты',
+                'test44': 'Шоколадки',
+                'test444': 'Значки',
+                'test55': 'Дисконтные карты/удостоверения',
+                'test555': 'Ежедневники',
+            }
+        },
+        // Полиграфия
+        btn_m5: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Визитки',
+                'test2': 'Буклеты/Лифлеты/листовки',
+                'test3': 'Ежедневники',
+                'test5': 'Блокноты',
+                'test6': 'Каталоги и брошюры',
+                'test7': 'Упаковка',
+                'test11': 'Плакаты',
+                'test111': 'Календари',
+            }
+        },
+        // Корпоративный стиль
+        btn_m6: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Разработка корпоративного стиля',
+                'test2': 'Брендирование транспорта',
+                'test3': 'Полиграфия',
+                'test5': 'Сувенирная продукция',
+                'test6': 'Брендбук',
+                'test7': 'Упаковка',
+                'test11': 'Оформление выставок',
+            }
+        },
+        // Освещение
+        btn_m6: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Люстры',
+                'test2': 'Световые короба (Лайтбоксы)',
+                'test3': 'Архитектурная подсветка',
+                'test5': 'Освещение витрин',
+            }
+        },
+        // POS Материалы
+        btn_m7: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Топперы',
+                'test2': 'Воблеры',
+                'test3': 'Изделия из акрила и оргстекла',
+                'test5': 'Подставки под товар',
+                'test6': 'Шелфтокеры',
+                'test7': 'Стопперы',
+                'test11': 'Холдеры',
+            }
+        },
+        // Выставочные стенды
+        btn_m8: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Портативный стенд ROLL-UP',
+                'test2': 'Портативный стенд X-BANNER (паук)',
+                'test3': 'Стенд POP UP',
+                'test5': 'Промостойка',
+                'test6': 'Выставочный стенд',
+                'test7': 'Разборной стенд для баннера',
+                'test11': 'Фотозона',
+                'test21': 'Штендеры',
+                'test31': 'Стенды для образцов',
+                'test51': 'Информационный стенд',
+            }
+        },
+        // Эксклюзив
+        btn_m9: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Изготовление мебели из металла и дерева',
+                'test2': 'Часы и предметы интерьера',
+                'test3': 'Элементы освещения',
+                'test5': 'Нестандартные рекламные конструкции',
+                'test6': 'Цветодинамические дисплеи',
+            }
+        },
+        // Дополнительные услуги
+        btn_m10: {
+            src:'src/img/yellow.jpg',
+            links: {
+                'test1': 'Лазерная резка',
+                'test2': 'Лазерная гравировка',
+                'test3': 'Дизайн',
+                'test5': 'Маркетинг',
+                'test6': '3D - Печать',
+                'test7': 'Плоттерная резка',
+                'test11': 'Высотные работы',
+                'test21': 'Изделия из фанеры',
+                'test31': 'Вышивка',
+                'test51': 'Шелкотрафаретная печать',
+                'test151': 'Ультрафиолетовая печать',
+                'test251': 'Оформление выставок',
+            }
+        },
+    };
+    const generateHtml = function generateHtml(links) {
+        let keys = Object.keys(links);
+        let ali = keys.map(function(link) {
+            let title = links[link];
+            return '<li><a href="'+link+'">' + title + '</a></li>';
+        });
+        return '<ul>' + ali.join('') + '</ul>';
+    };
+    $('.menu_category').on({
+        'click': function(){
+            let catName = $(this).attr('data-category');
+            let data = catList[catName];
+            $('.change-image').attr('src', data.src);
+            $('.menu_subcategory').html(generateHtml(data.links))
+        }
+    });
 
 
     $('.menu_category_bnt1').on({
@@ -199,4 +397,30 @@ jQuery(document).ready(function($){
             $('.menu_subcategory').html('<ul><li>Лазерная резка</li><li>Лазерная гравировка</li><li>Дизайн</li><li>Маркетинг</li><li>3D - Печать</li><li>Плоттерная резка</li><li>Высотные работы</li><li>Изделия из фанеры</li><li>Вышивка</li><li>Шелкотрафаретная печать</li><li>Ультрафиолетовая печать </li><li>Оформление выставок </li></ul>');
         }
     });
+
+    // Img Lazyloading
+    const targets = document.querySelectorAll('img');
+
+    const lazyload = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                console.log('!!!');
+
+                if (entry.isIntersecting) {
+                    const  img = entry.target;
+                    const src = img.getAttribute('data-lazy');
+
+                    img.setAttribute('src', src);
+                    img.classList.add('fade');
+
+                    observer.disconnect();
+                }
+            });
+
+        });
+        io.observe(target)
+    };
+
+    targets.forEach(lazyload);
+
 });

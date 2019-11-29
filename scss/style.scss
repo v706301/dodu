@@ -116,8 +116,9 @@ img:not([src]),img[src=""] {
 select, input, textarea {
   padding: 0 15px;
 }
-
-
+label{
+ font-weight: 600;
+}
 textarea {
   resize: none;
 }
@@ -139,7 +140,7 @@ input:focus, select:focus, textarea:focus {
 
 .adv_btn {
   background-color: orangered;
-  padding: 20px 55px;
+  padding: 20px;
   border: none;
   color: white;
   font-size: 20px;
@@ -196,7 +197,7 @@ input:focus, select:focus, textarea:focus {
 .t_btn:hover{
   cursor: pointer;
 }
-.t_btn:hover::after{
+.t_btn:hover::after, .post_link:hover::after{
   left: 10px;
   transition: all 500ms;
 }
@@ -244,8 +245,10 @@ input:focus, select:focus, textarea:focus {
   box-sizing: border-box;
   position: relative;
   //width: 90%;
-  margin: 5rem 10rem;
-  padding: 5rem;
+  //margin: 5rem 10rem;
+  //padding: 5rem;
+  margin: 2rem 10rem;
+  padding: 2rem 5rem;
   border: 2px solid #f54b19;;
 }
 
@@ -661,6 +664,18 @@ header {
   background-color: white;
 }
 
+.title-wrapper {
+  height: 50px;
+  margin-top: 24px;
+}
+
+#home_title {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
 .main_top_wrapper p:last-child {
   margin-top: 24px;
 }
@@ -786,7 +801,7 @@ header {
   }
 
   .main_service_bottom_container{
-    height: 200px;
+    height: 150px;
   }
 }
 
@@ -795,6 +810,7 @@ header {
   @include F_C;
   align-items: center;
   background-color: white;
+  padding-bottom: 6em;
 
   .why_we_slogan{
     transform: translateY(-25px);
@@ -848,7 +864,8 @@ header {
     display: flex;
     position: relative;
     background: #171717;
-    padding: 4em 0;
+    padding: 8em 0 0 0;
+    //padding: 4em 0;
 
     .triangles{
       position: absolute;
@@ -1126,68 +1143,7 @@ height: 200px;
   }
 
 }
-  .team {
-    height: 380px;
-    width: 375px;
-    background-image: url("../src/img/img/aidra.jpg");
-    background-size:cover;
-    overflow: hidden;
-    position: relative;
 
-  }
-
-  .team .team_hover
-  {
-
-    position: absolute;
-    z-index: 1000;
-    top:0;left:0;right:0;bottom:0;
-
-  }
-  .team:hover .team_hover
-  {
-    background: linear-gradient(164.44deg, #FF5B00 11.01%, #F4511E 46.15%, #FD3304 79.37%, #E9150B 99.23%);
-    transition: all 0.7s;
-    opacity: 0.9;
-  }
-  .team .team_name
-  {
-    position: absolute;
-    text-transform: uppercase;
-    padding: 7px;
-    z-index: 1000;
-    top:50%;
-    left:-80%;
-    font-weight: bold;
-    font-size: 20px; width: 80%;
-    transition: all 0.7s;
-    span{
-      margin-left: 10%;
-    }
-  }
-  .team:hover .team_name
-  {
-     left:0;
-
-  }
-  .team .team_role
-  {
-    position: absolute;
-    padding: 5px;
-    z-index: 1000;
-    top: 62%;
-    right:-100%;
-    color:#ffffff;
-    font-weight: 300;
-    font-size: 16px;
-    width: 90%;
-    transition: all 0.7s;
-
-  }
-  .team:hover .team_role
-  {
-    right:0;
-  }
   //About Us Callback
 .about_us_callback {
   display: flex;
@@ -1927,8 +1883,12 @@ height: 200px;
       flex-basis: 33%;
       flex-direction: column;
       width: 450px;
+      max-height: 300px;
       margin: 2.5px 0;
 
+      img {
+        height: 100%;
+      }
       .p_overlay{
         display: flex;
         align-items: flex-end;
@@ -2282,6 +2242,7 @@ height: 200px;
   bottom: 0;
   left: 9px;
   display: inline-block;
+  transition: all 500ms;
 }
 // FOOTER
 
@@ -2295,7 +2256,7 @@ color: white;
 
 .footer_top {
 background-color: #171717;
-height: 900px;
+height: 1200px;
 display: flex;
 justify-content: space-around;
 margin-top: 150px;
@@ -2322,6 +2283,7 @@ margin-top: 150px;
 
   .form_container{
     padding: 0 20%;
+    margin-top: 25px;
   }
 
   .footer_form form{
@@ -2369,20 +2331,19 @@ margin-top: 150px;
 }
 
 .footer_top_right {
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-position: relative;
-
-.footer_triangles {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(185px, -75px)rotate(30deg);
-
-  img{
-    width: 150px;
-  }
+  display: flex;
+  padding: 150px 0;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  .footer_triangles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(185px, -75px)rotate(30deg);
+    img{
+      width: 150px;
+    }
 }
 .footer_contacts {
   display: flex;
@@ -3316,6 +3277,9 @@ div{
     justify-content: space-between;
     width: 100%;
   }
+  .mob_logo{
+    margin-right: 5%;
+  }
   .dropdown_container {
     display: none;
     flex-direction: column;
@@ -3999,6 +3963,12 @@ div{
 @media only screen and (max-width: 450px) {
   .main_top_wrapper .big {
     font-size: 16px;
+  }
+  #home_title {
+    font-size: 16px;
+  }
+  .title-wrapper {
+    margin-top: 15px;
   }
   .xxx1, .xxx2, .xxx2_2, .xxx3, .xxx4, .xxx5, .xxx6, .xxx7, .xxx8, .xxx9 {
     margin: 0;
