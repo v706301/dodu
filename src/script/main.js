@@ -113,7 +113,7 @@ jQuery(document).ready(function($){
         $vcont.slideToggle(500);
     })
 
-    // Category/image switcher
+    // Category/Image switcher
     const catList = {
         // Брендированная одежда
         btn_m: {
@@ -228,7 +228,7 @@ jQuery(document).ready(function($){
             }
         },
         // Освещение
-        btn_m6: {
+        btn_m7: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Люстры',
@@ -238,7 +238,7 @@ jQuery(document).ready(function($){
             }
         },
         // POS Материалы
-        btn_m7: {
+        btn_m8: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Топперы',
@@ -251,7 +251,7 @@ jQuery(document).ready(function($){
             }
         },
         // Выставочные стенды
-        btn_m8: {
+        btn_m9: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Портативный стенд ROLL-UP',
@@ -267,7 +267,7 @@ jQuery(document).ready(function($){
             }
         },
         // Эксклюзив
-        btn_m9: {
+        btn_m10: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Изготовление мебели из металла и дерева',
@@ -278,7 +278,7 @@ jQuery(document).ready(function($){
             }
         },
         // Дополнительные услуги
-        btn_m10: {
+        btn_m11: {
             src:'src/img/yellow.jpg',
             links: {
                 'test1': 'Лазерная резка',
@@ -305,11 +305,12 @@ jQuery(document).ready(function($){
         return '<ul>' + ali.join('') + '</ul>';
     };
     $('.menu_category').on({
-        'click': function(){
+        'mouseover': function(){
             let catName = $(this).attr('data-category');
             let data = catList[catName];
             $('.change-image').attr('src', data.src);
-            $('.menu_subcategory').html(generateHtml(data.links))
+            $('.menu_subcategory').html(generateHtml(data.links));
+            $(this).toggleClass('arrowRight');
         }
     });
 

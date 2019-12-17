@@ -17,13 +17,13 @@
         <nav class="main_menu">
             <ul class="menu_ul">
                 <li class="fs20">
-                    <a href="#" class="dropbtn m_li">Услуги</a>
+                    <a href="#" class="dropbtn arrowDown m_li">Услуги</a>
                     <div class="dropdown_wrapper">
                         <div class="menu_category">
                             <ul>
                                 <li class="m_li menu_category_bnt1"><a href="category-page.html">Брендированная одежда</a></li>
-                                <li class="m_li menu_category_bnt2">Наружная реклама</li>
-                                <li class="m_li menu_category_bnt3">Широкоформатная печать</li>
+                                <li class="m_li menu_category" data-category="btn_m">Наружная реклама</li>
+                                <li class="m_li menu_category" data-category="btn_m1">Широкоформатная печать</li>
                                 <li class="m_li menu_category_bnt4">Оформление интерьеров</li>
                                 <li class="m_li menu_category_bnt5">Сувенирная продукция</li>
                                 <li class="m_li menu_category_bnt6">Полиграфия</li>
@@ -39,7 +39,7 @@
 
                         </div>
                         <div class="menu_category_img">
-                            <img class="change-image" data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
+                            <img class="change-image" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
                         </div>
                     </div>
                 </li>
@@ -84,6 +84,7 @@
                 </ul>
             </div>
         </nav>
+        <p class="mob_logo white"><a href="/" class="logo big">ADVANCE</a></p>
     </div>
 </header>
 <!--HEADER END-->
@@ -312,6 +313,7 @@
     }
 
 </script>
+<!--FOOTER-->
 <footer>
     <div class="footer_top">
         <div class="footer_top_left">
@@ -343,7 +345,7 @@
                                 <label for="f_message">Сообщение</label>
                                 <textarea id="f_message" rows="5" cols="33"></textarea>
                             </div>
-                            <button type="submit"  class="adv_btn fs20 f_btn">Отправить</button>
+                            <button type="submit"  class="btn-2"><span>Отправить</span></button>
                         </form>
                     </div>
                 </div>
@@ -398,7 +400,7 @@
                 <img data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
             </div>
             <div class="f_mail">
-                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте<br> нам запрос и мы свяжемся с вами в течении часа<br>
+                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте нам запрос и мы свяжемся с вами в течении часа<br>
                     <span><a href="mailto:advanced.kh.ua@gmail.com" class="orange">advanced.kh.ua@gmail.com</a></span>
                 </p>
             </div>
@@ -413,7 +415,7 @@
                 <div class="footer_nav">
                     <nav class="main_menu">
                         <ul class="menu_ul">
-                            <li class="fs20 active">Услуги</li>
+                            <li class="fs20">О нас</li>
                             <li class="fs20">Портфолио</li>
                             <li class="fs20">Новости</li>
                             <li class="fs20">Контакты</li>
@@ -423,7 +425,7 @@
             </div>
             <div>
                 <div class="footer_copyright">
-                    <p class="r">Copyright &copy; 2019 ADVANCE. All rights reserved</p>
+                    <p class="r">Copyright &copy; 2019-2020 ADVANCE. All rights reserved</p>
                 </div>
             </div>
         </div>
@@ -437,6 +439,9 @@
                 <span><a href="#"><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></a></span>
             </div>
         </div>
+    </div>
+    <div class="footer_mobile_copy">
+        <p>Copyright &copy; 2019-2020 ADVANCE.<br> All rights reserved</p>
     </div>
 </footer>
 </body>
