@@ -8,6 +8,7 @@
     <script defer src="src/script/lazy.js"></script>
     <script defer src="src/script/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 <!--HEADER-->
@@ -292,7 +293,7 @@
                     </ul>
                 </div>
                 <div class="menu_service_img">
-                    <img class="change-image" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
+                    <img class="change-image animated fadeInUp" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
                 </div>
             </div>
         </div>
@@ -312,16 +313,16 @@
         <p class="why_we_slogan bigger_center">Почему ADVANCE</p>
     </div>
     <div class=why_we_wrapper>
-        <div class="why_container">
+        <div class="why_container animated fadeInUp">
             <img data-lazy="src/img/main/lamp.svg" src="/" alt="decoration">
             <p>Мы воплотим в жизнь<br>
                 замысел любой сложности</p>
         </div>
-        <div class="why_container">
+        <div class="why_container animated fadeInUp delay-500ms">
             <img data-lazy="src/img/main/clock.svg" src="/" alt="decoration">
             <p>Мы всегда выполняем<br>заказы в срок</p>
         </div>
-        <div class="why_container">
+        <div class="why_container why_container animated fadeInUp delay-1000ms">
             <img data-lazy="src/img/main/piggy-bank.svg" src="/" alt="decoration">
             <p>Заказав рекламу у нас<br>
                 Вы существенно сэкономите</p>
@@ -451,7 +452,11 @@
         </div>
         <div class="footer_top_right">
             <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" class="orbit" src="/" alt="decoration">
+                <div class="exodus__ps-shape">
+                    <div class="exodus__ps-shape--triangle">
+                        <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
             </div>
             <div class="footer_contacts">
                 <div class="f_contacts">
@@ -516,7 +521,7 @@
             </div>
             <div>
                 <div class="footer_copyright">
-                    <p class="r">Copyright &copy; 2019-2020 ADVANCE. All rights reserved</p>
+                    <p class="r">Copyright &copy; 2020 ADVANCE. All rights reserved</p>
                 </div>
             </div>
         </div>

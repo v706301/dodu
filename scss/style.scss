@@ -265,6 +265,23 @@ input:focus, select:focus, textarea:focus {
   border-color: #ffffff transparent transparent transparent;
 }
 
+.exodus__ps-shape {
+  animation: orbit--lg 8s ease-in-out infinite;
+  animation-delay: 0s;
+  /*position: absolute;*/
+  position: relative;
+  bottom: 5%;
+  right: -2rem;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+.exodus__ps-shape__svg {
+  animation: innerOrbit 120s ease-out infinite;
+  z-index: 2;
+}
+
+
 // Animation
 
 @keyframes spin {
@@ -960,13 +977,18 @@ header {
   }
   .menu_service_img::after {
     content: "";
-    background-image: linear-gradient(to bottom, #ff5b00 11%, #f4511e 46%, #fd3304 79%, #e9150b 99%);
     width: 423px;
     height: 423px;
+    background-image: linear-gradient(45deg, #ff5b00 11%, #f4511e 46%, #fd3304 79%, #e9150b 99%);
+    -webkit-animation: gradient 6s ease infinite;
+    animation: gradient 6s ease infinite;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
     position: absolute;
     bottom: -135px;
     left: -50px;
     z-index: 0;
+    background-size: 600% 100%;
   }
 
   .main_service_bottom_container{
@@ -1821,10 +1843,6 @@ height: 200px;
 .sub_service_wrapper{
   @include F_C;
   color: black;
-
-  .sub_service_container {
-
-  }
 
   .sub_service_top_container{
     @include F_R;
@@ -2922,12 +2940,12 @@ div{
   .main_service_wrapper .menu_service_img img {
     width: 550px;
   }
-  .main_how_we_work .main_how_we_work_top .how_we_work_right {
-    img{
-      //width: 570px;
-      //height: 475px;
-    }
-  }
+  // .main_how_we_work .main_how_we_work_top .how_we_work_right {
+  //   img{
+  //     width: 570px;
+  //     height: 475px;
+  //   }
+  // }
   .main_how_we_work .main_how_we_work_top .how_we_work_right:after {
     bottom: -30px;
     right: 0;
