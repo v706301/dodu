@@ -50,9 +50,10 @@
                     <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="menu_tel phone_list">
-                <ul>
-                    <li"><a href="tel://057 761 761 6" class="orange">057 761 761 6</a></li">
+            <div class="menu_tel phone_list hvr-icon-hang">
+                <span class="orange tel_t">057 761 761 6</span>
+                <i class="fa fa-chevron-down hvr-icon"></i>
+                <ul class="hidden phones">
                     <li><a href="tel://093 761 761 6" class="orange">093 761 761 6</a></li>
                     <li><a href="tel://096 761 761 6" class="orange">096 761 761 6</a></li>
                 </ul>
@@ -116,9 +117,9 @@
                         <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
                     </div>
                 </div>
-                <div class="exodus__ps-shape">
-                    <div class="exodus__ps-shape--triangle">
-                        <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <div class="tri_little">
+                    <div class="triangle__figure--small">
+                        <img  data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
                     </div>
                 </div>
             </div>
@@ -311,9 +312,21 @@
             </div>
         </div>
         <div class="service_triangles">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-            <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+            <div>
+                <div class="triangle__figure--small">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
+            <div>
+                <div class="triangle__figure--medium">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
+            <div>
+                <div class="triangle__figure--large">
+                    <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                </div>
+            </div>
         </div>
     </div>
     <div class="main_service_bottom_container xxx4">
@@ -384,21 +397,35 @@
     </div>
     <div class="main_our_works_img_wrapper">
         <div class="main_gallery">
-            <div class="gallery_item"><img data-lazy="src/img/main/best/1E1R1841.png" src="/" alt="Black Image" />
-                <div class="gallery_hover">
-                    <h5>1111</h5>
-                    <p>olololo</p>
-                </div>
+            <div class="gallery_item">
+                <figure class="img-container">
+                    <img class="thumb" data-lazy="src/img/main/best/1E1R1841.png"  
+                    data-thumb="src/img/main/best/1E1R1841.png" 
+                    data-big="src/img/main/best/1E1R1841.png" 
+                    src="/" alt="Black Image" />
+                    <div class="img-container-bg"></div>
+                    <div class="gallery_hover">
+                        <h5>1111</h5>
+                        <p>olololo</p>
+                    </div>
+                </figure>
             </div>
-            <div class="gallery_item long"><img  data-lazy="src/img/main/best/IMG_0018.jpeg" src="/" alt="Black Image" />
-                <div class="gallery_hover">
-                    <h5>222</h5>
-                    <p>olololo</p>
-                </div>
+            <div class="gallery_item long">
+                <figure class="img-container">
+                    <img class="thumb" data-lazy="src/img/main/best/IMG_0018.jpeg"  
+                    data-thumb="src/img/main/best/IMG_0018.jpeg" 
+                    data-big="src/img/main/best/IMG_0018.jpeg" 
+                    src="/" alt="Black Image" />
+                    <div class="img-container-bg"></div>
+                    <div class="gallery_hover">
+                        <h5>2222</h5>
+                        <p>a3a3a3</p>
+                    </div>
+                </figure>
             </div>
             <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0405.png" src="/" alt="Black Image" />
                 <div class="gallery_hover">
-                    <h5>1111</h5>
+                    <h5>333</h5>
                     <p>olololo</p>
                 </div>
             </div>
@@ -569,6 +596,9 @@
     </div>
 </footer>
 <script>
+
+
+// RUNNING TITLE
     var replaceText = {
         $text_container: null,
         replace_delay: 1000,
@@ -637,6 +667,52 @@
 
         animateText();
 
-    });</script>
+    });
+    
+
+
+
+    // IMG ZOOM EFFECT
+    (() => {
+	const IMAGES = document.querySelectorAll(".thumb");
+	let imageActive = false;
+	let normalImage;
+	let bigImage;
+
+	IMAGES.forEach(image =>
+		image.addEventListener("click", () => {
+			handleImage(image);
+		})
+	);
+
+	const handleImage = image => {
+		if (!imageActive) openImage(image);
+		else if (imageActive) closeImage(image);
+	};
+
+	const openImage = image => {
+		imageActive = true;
+		setImageSrc(image);
+		image.parentNode.classList.add("is-active");
+	};
+
+	const closeImage = image => {
+		imageActive = false;
+		setImageSrc(image);
+		image.parentNode.classList.remove("is-active");
+	};
+
+	const setImageSrc = image => image.setAttribute("src", getImageSrc(image));
+
+	const getImageSrc = image => {
+		let normalImage = image.getAttribute("data-thumb");
+		let bigImage = image.getAttribute("data-big");
+
+		if (imageActive) return bigImage;
+		else if (!imageActive) return normalImage;
+	};
+    })();
+
+    </script>
 </body>
 </html>

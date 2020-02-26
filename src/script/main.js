@@ -47,6 +47,12 @@ jQuery(document).ready(function($){
         }
     });
 
+    $('.menu_tel').on({
+        'click': function(){
+            $('.phones').toggle(100).css('visibility', 'visible');
+            // $('.tel_t').toggle();
+        }
+    });
 
     // Header dropdown hide
     // $(function ($) {
