@@ -310,13 +310,13 @@ jQuery(document).ready(function($){
         });
         return '<ul>' + ali.join('') + '</ul>';
     };
-    $('.menu_category').on({
+    $('li.menu_category').on({
         'mouseover': function(){
             let catName = $(this).attr('data-category');
             let data = catList[catName];
             $('.change-image').attr('src', data.src);
             $('.menu_subcategory').html(generateHtml(data.links));
-            $(this).toggleClass('arrowRight');
+            // $(this).toggleClass('arrowRight');
         }
     });
 

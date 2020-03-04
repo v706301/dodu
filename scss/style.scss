@@ -93,8 +93,8 @@ body {
 }
 
 .hidden {
-  // display: none;
-  visibility: hidden;
+  display: none;
+  // visibility: hidden;
 }
 
 a{
@@ -196,7 +196,7 @@ input:focus, select:focus, textarea:focus {
 
 .phone_list{
   position: relative;
-  width: 105px;
+  width: 130px;
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3
 }
@@ -920,6 +920,24 @@ header {
 }
 
 
+li.menu_category:hover {
+  color: orangered;
+  transition: all 500ms;
+}
+li.menu_category:hover:after{
+  content: "";
+  background-image: url(../src/img/main/r_arrow.svg);
+  background-size: 10px 10px;
+  box-sizing: border-box;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  bottom: 0;
+  left: 9px;
+  display: inline-block;
+  transition: all 500ms;
+}
+
 .arrowRight{
   color: orangered;
 }
@@ -990,6 +1008,9 @@ header {
   }
 
 
+  .menu_subcategory {
+    transition: ease-out 1s;
+  }
   .menu_category_img {
     position: relative;
   }
@@ -1066,6 +1087,11 @@ header {
 }
 
 //MAIN SERVICE SECTION
+.main_service_wrapper {
+  display: flex;
+  
+}
+
 .service_wrapper{
   display: flex;
   color: white;
@@ -1132,7 +1158,7 @@ header {
         transform: translate(50px, 20px);
       }
       .tri_little{
-        transform: translate(135px, -50px) rotate(59deg);
+        transform: translate(150px, -40px) rotate(59deg);
         height: 25px;
         width: 25px;
       }
