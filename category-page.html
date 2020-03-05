@@ -5,86 +5,136 @@
     <title>Advance</title>
     <link rel="stylesheet" href="css/style.min.css">
     <script src="src/script/jquery.min.js"></script>
-    <script defer src="src/script/lazy.js"></script>
     <script defer src="src/script/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="src/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="src/slick/slick-theme.css"/> -->
+    <script type="application/ld+json">
+     {
+        "@context" : "http://schema.org",
+        "@type" : "LocalBusiness",
+        "name" : "ADVANCE",
+        "url" : "https://rakasovsky.github.io/adv.github.io",
+        "telephone" : "+38(096)761 761 6",
+        "email" : "advanced.kh.ua@gmail.com",
+        "logo" : "https://rakasovsky.github.io/adv.github.io/src/img/logo.jpg",
+        "address" : {
+          "@type" : "PostalAddress",
+          "streetAddress" : "ул.Клочковская, 192-A, Офис 124",
+          "addressLocality" : "Харьков",
+          "addressCountry" : "Украина",
+          "postalCode" : "61145"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+                ],
+                "opens": "10:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                "Saturday",
+                "Sunday"
+                ]
+            }
+        ],
+        "image" : "https://rakasovsky.github.io/adv.github.io/src/img/logo.jpg"
+      } 
+      </script>
 </head>
 <body>
 <!--HEADER-->
 <header class="nav-down">
-    <div class="header_wrapper">
-        <p class="white"><a href="/" class="logo big">ADVANCE</a></p>
-        <nav class="main_menu">
-            <ul class="menu_ul">
-                <li class="fs20">
-                    <a href="#" class="dropbtn m_li">Услуги</a>
-                    <div class="dropdown_wrapper">
-                        <div class="menu_category">
-                            <ul>
-                                <li class="m_li menu_category_bnt1"><a href="category-page.html">Брендированная одежда</a></li>
-                                <li class="m_li menu_category_bnt2">Наружная реклама</li>
-                                <li class="m_li menu_category_bnt3">Широкоформатная печать</li>
-                                <li class="m_li menu_category_bnt4">Оформление интерьеров</li>
-                                <li class="m_li menu_category_bnt5">Сувенирная продукция</li>
-                                <li class="m_li menu_category_bnt6">Полиграфия</li>
-                                <li class="m_li menu_category_bnt7">Корпоративный стиль</li>
-                                <li class="m_li menu_category_bnt8">Освещение</li>
-                                <li class="m_li menu_category_bnt9">POS Материалы</li>
-                                <li class="m_li menu_category_bnt10">Выставочные стенды</li>
-                                <li class="m_li menu_category_bnt11">Эксклюзив</li>
-                                <li class="m_li menu_category_bnt12">Дополнительные услуги</li>
-                            </ul>
-                        </div>
-                        <div class="menu_subcategory">
+        <div class="header_wrapper">
+            <p class="white"><a href="/" class="logo big">ADVANCE</a></p>
+            <nav class="main_menu">
+                <ul class="menu_ul">
+                    <li class="fs20">
+                        <a href="#" class="dropbtn arrowDown m_li">Услуги</a>
+                        <div class="dropdown_wrapper">
+                            <div class="menu_category">
+                                <ul>
+                                    <li class="menu_category_bnt1"><a href="category-page.html">Брендированная одежда</a></li>
+                                    <li class="menu_category" data-category="btn_m">Наружная реклама</li>
+                                    <li class="menu_category" data-category="btn_m1">Широкоформатная печать</li>
+                                    <li class="menu_category_bnt4">Оформление интерьеров</li>
+                                    <li class="menu_category_bnt5">Сувенирная продукция</li>
+                                    <li class="menu_category_bnt6">Полиграфия</li>
+                                    <li class="menu_category_bnt7">Корпоративный стиль</li>
+                                    <li class="menu_category_bnt8">Освещение</li>
+                                    <li class="menu_category_bnt9">POS Материалы</li>
+                                    <li class="menu_category_bnt10">Выставочные стенды</li>
+                                    <li class="menu_category_bnt11">Эксклюзив</li>
+                                    <li class="menu_category_bnt12">Дополнительные услуги</li>
+                                </ul>
+                            </div>
+                            <div class="menu_subcategory">
 
+                            </div>
+                            <div class="menu_category_img">
+                                <img class="change-image" data-lazy="src/img/ABOUT.png" src="/" alt="Advance" />
+                            </div>
                         </div>
-                        <div class="menu_category_img">
-                            <img class="change-image" data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
-                        </div>
-                    </div>
-                </li>
-                <li class="fs20 m_li"><a href="portfolio.html" class="m_li">Портфолио</a></li>
-                <li class="fs20 m_li"><a href="about-us.html" class="m_li">О нас</a></li>
-                <li class="fs20 m_li"><a href="news.html" class="m_li">Новости</a></li>
-                <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="menu_tel">
-            <a href="tel://057 761 761 6" class="orange">057 761 761 6</a>
-        </div>
-    </div>
-    <div class="mob_menu">
-        <nav role="navigation">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <li><a href="portfolio.html" class="m_li">Портфолио</a></li>
-                    <li><a href="#" class="m_li dropbtn2">Услуги</a>
-                        <ul class="dropdown_container">
-                            <li class="m_li"><a href="category-page.html">Брендированная одежда</a></li>
-                            <li class="m_li">Наружная реклама</li>
-                            <li class="m_li">Широкоформатная печать</li>
-                            <li class="m_li">Оформление интерьеров</li>
-                            <li class="m_li">Сувенирная продукция</li>
-                            <li class="m_li">Полиграфия</li>
-                            <li class="m_li">Корпоративный стиль</li>
-                            <li class="m_li">Освещение</li>
-                            <li class="m_li">POS Материалы</li>
-                            <li class="m_li">Выставочные стенды</li>
-                            <li class="m_li">Эксклюзив</li>
-                            <li class="m_li">Дополнительные услуги</li>
-                        </ul>
                     </li>
-                    <li><a href="about-us.html" class="m_li">О нас</a></li>
-                    <li><a href="news.html" class="m_li">Новости</a></li>
-                    <li><a href="contacts.html" class="m_li">Контакты</a></li>
+                    <li class="fs20 m_li"><a href="portfolio.html" class="m_li">Портфолио</a></li>
+                    <li class="fs20 m_li"><a href="about-us.html" class="m_li">О нас</a></li>
+                    <li class="fs20 m_li"><a href="news.html" class="m_li">Новости</a></li>
+                    <li class="fs20 m_li"><a href="contacts.html" class="m_li">Контакты</a></li>
                 </ul>
+            </nav>
+            <div class="menu_tel phone_list hvr-icon-hang">
+                <span class="orange tel_t">057 761 761 6</span>
+                <i class="fa fa-chevron-down hvr-icon"></i>
+                <ul class="hidden phones">
+                    <li><a href="tel://093 761 761 6" class="orange">093 761 761 6</a></li>
+                    <li><a href="tel://096 761 761 6" class="orange">096 761 761 6</a></li>
+                </ul>
+                <!-- <a href="tel://057 761 761 6" class="orange">057 761 761 6</a> -->
             </div>
-        </nav>
-    </div>
+        </div>
+       <div class="mob_menu">
+           <nav role="navigation">
+               <div id="menuToggle">
+                   <input type="checkbox" />
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <ul id="menu">
+                       <li><a href="portfolio.html" class="m_li">Портфолио</a></li>
+                       <li><a href="#" class="m_li dropbtn2">Услуги</a>
+                           <ul class="dropdown_container">
+                               <li class="m_li"><a href="category-page.html">Брендированная одежда</a></li>
+                               <li class="m_li">Наружная реклама</li>
+                               <li class="m_li">Широкоформатная печать</li>
+                               <li class="m_li">Оформление интерьеров</li>
+                               <li class="m_li">Сувенирная продукция</li>
+                               <li class="m_li">Полиграфия</li>
+                               <li class="m_li">Корпоративный стиль</li>
+                               <li class="m_li">Освещение</li>
+                               <li class="m_li">POS Материалы</li>
+                               <li class="m_li">Выставочные стенды</li>
+                               <li class="m_li">Эксклюзив</li>
+                               <li class="m_li">Дополнительные услуги</li>
+                           </ul>
+                       </li>
+                       <li><a href="about-us.html" class="m_li">О нас</a></li>
+                       <li><a href="news.html" class="m_li">Новости</a></li>
+                       <li><a href="contacts.html" class="m_li">Контакты</a></li>
+                   </ul>
+               </div>
+           </nav>
+           <p class="mob_logo white"><a href="/" class="logo big">ADVANCE</a></p>
+       </div>
 </header>
 <!--HEADER END-->
 <div class="header_fix">
@@ -135,32 +185,39 @@
         <p class="why_we_slogan bigger_center">Наши работы</p>
     </div>
 </section>
+<!-- SLIDER -->
 <section class="adb_slider">
     <div class="slider_container">
         <section>
         <ul class="carousel">
-            <li class="items main-pos" id="1"><p>1</p></li>
+            <li class="items main-pos" id="1">
+                <img data-lazy="http://farm9.staticflickr.com/8337/8234123289_2b23aeaf06.jpg" src="/" alt="decoration"/>
+            </li>
             <li class="items right-pos" id="2">
-                <img src="http://farm9.staticflickr.com/8337/8234123289_2b23aeaf06.jpg" />
+                <img data-lazy="http://farm9.staticflickr.com/8337/8234123289_2b23aeaf06.jpg" src="/" alt="decoration"/>
             </li>
             <li class="items back-pos" id="3">
-                <img src="http://farm9.staticflickr.com/8337/8234711202_831b23a2b7.jpg"/>
+                <img data-lazy="http://farm9.staticflickr.com/8337/8234711202_831b23a2b7.jpg" src="/" alt="decoration"/>
             </li>
-            <li class="items back-pos" id="4"><iframe width="500" height="281" src="https://www.youtube.com/embed/szIEr2F61DU" frameborder="0" allowfullscreen></iframe></li>
+            <li class="items back-pos" id="4">
+                <iframe width="500" height="281" src="https://www.youtube.com/embed/szIEr2F61DU" frameborder="0" allowfullscreen></iframe></li>
             <li class="items back-pos" id="5">
                 <iframe src="https://player.vimeo.com/video/19464611" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </li>
             <li class="items back-pos" id="6">
-                <img src="http://woofie2.pixiq.com/files/cache/20030323_img_7465_3072_x_2048_619x413.jpg" />
+                <img data-lazy="https://gamingbolt.com/wp-content/uploads/2020/03/Valorant-768x432.jpg" src="/" alt="decoration"/>
             </li>
-            <li class="items left-pos" id="7"><img src="http://www.mishes.com/wp-content/uploads/2011/12/FlickrMonday07.jpg"/>
+            <li class="items left-pos" id="7">
+                <img data-lazy="http://www.mishes.com/wp-content/uploads/2011/12/FlickrMonday07.jpg" src="/" alt="decoration"/>
             </li>
         </ul>
-        <span>
-          <input type="button" value="Prev" id="prev">
-          <input type="button" value="Next" id="next">
-        </span>
     </section>
+      <span class="left_button">
+        <button id="prev"> </button>
+      </span>  
+      <span class="right_button">
+        <button id="next"> </button>
+      </span>
     </div>
 </section>
 <section class="main_our_works xxx5">
@@ -368,6 +425,7 @@
         </div>
     </div>
 </section>
+<!--FOOTER-->
 <footer>
     <div class="footer_top">
         <div class="footer_top_left">
@@ -399,7 +457,7 @@
                                 <label for="f_message">Сообщение</label>
                                 <textarea id="f_message" rows="5" cols="33"></textarea>
                             </div>
-                            <button type="submit"  class="adv_btn fs20 f_btn">Отправить</button>
+                            <button type="submit"  class="btn-2"><span>Отправить</span></button>
                         </form>
                     </div>
                 </div>
@@ -408,13 +466,17 @@
                 </div>
             </div>
             <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit" src="/" alt="decoration">
+                <img data-lazy="src/img/footer/Triangle.svg" class="orbit_rev" src="/" alt="decoration">
             </div>
         </div>
         <div class="footer_top_right">
             <div class="footer_triangles">
-                <img data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                <div class="exodus__ps-shape">
+                    <div class="exodus__ps-shape--triangle">
+                        <img class="exodus__ps-shape__svg" data-lazy="src/img/footer/Triangle.svg" src="/" alt="decoration">
+                    </div>
+                </div>
             </div>
             <div class="footer_contacts">
                 <div class="f_contacts">
@@ -424,8 +486,10 @@
                     <div>
                         <p class="orange">Наш адрес</p>
                         <p>Украина, Харьков</p>
-                        <p>ул.Мироносицкая, 88</p>
-                        <p>61023</p>
+                        <p>ул.Клочковская, 192-A</p>
+                        <p>БЦ "МІСТО"</p>
+                        <p>офис №124</p>
+                        <p>61145</p>
                     </div>
                 </div>
                 <div class="f_contacts">
@@ -435,9 +499,9 @@
                     <div>
                         <p class="orange">Телефон</p>
                         <p>Виктория Колесник:</p>
-                        <p>+38(096)761 761 6</p>
+                        <p><a href="tel://+380967617616">+38(096)761 761 6</a></p>
                         <p>Игорь Шорох</p>
-                        <p>+38(050)662 551 1</p>
+                        <p><a href="tel://+380506625511">+38(050)662 551 1</a></p>
                     </div>
                 </div>
                 <div class="f_contacts">
@@ -446,17 +510,16 @@
                     </span>
                     <div>
                         <p class="orange">Telegram</p>
-                        <p>+3(093)761 761 6</p>
+                        <p><a href="tel://+380937617616 ">+38(093)761 761 6</a></p>
                     </div>
                 </div>
             </div>
             <div class="contact_map">
                 <img data-lazy="src/img/black.jpg" src="/" alt="Black Image" />
-                <div class="stripes"></div>
             </div>
             <div class="f_mail">
-                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте<br> нам запрос и мы свяжемся с вами в течении часа<br>
-                    <span class="orange">advanced.kh.ua@gmail.com</span>
+                <p>Мы всегда открыты к сотрудничеству с заказчиками, поставщиками материалов, производителями и рекламными агенствами. Отправьте нам запрос и мы свяжемся с вами в течении часа<br>
+                <span><a href="mailto:advanced.kh.ua@gmail.com" class="orange">advanced.kh.ua@gmail.com</a></span>
                 </p>
             </div>
         </div>
@@ -470,7 +533,7 @@
                 <div class="footer_nav">
                     <nav class="main_menu">
                         <ul class="menu_ul">
-                            <li class="fs20 active">Услуги</li>
+                            <li class="fs20">О нас</li>
                             <li class="fs20">Портфолио</li>
                             <li class="fs20">Новости</li>
                             <li class="fs20">Контакты</li>
@@ -480,7 +543,7 @@
             </div>
             <div>
                 <div class="footer_copyright">
-                    <p class="r">Copyright &copy; 2019 ADVANCE. All rights reserved</p>
+                    <p class="r">Copyright &copy; 2020 ADVANCE. All rights reserved</p>
                 </div>
             </div>
         </div>
@@ -490,10 +553,14 @@
                 <p class="r">в социальных сетях</p>
             </div>
             <div class="social_wrapper">
-                <span><img data-lazy="src/img/footer/insta.svg" src="/" alt="instagram icon"></span>
-                <span><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></span>
+                <span><a href="#"><img data-lazy="src/img/footer/insta.svg" src="/" alt="instagram icon"></a></span>
+                <span><a href="#"><img data-lazy="src/img/footer/linked.svg" src="/" alt="linkedin icon"></a></span>
+                <span><a href="#"><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></a></span>
             </div>
         </div>
+    </div>
+    <div class="footer_mobile_copy">
+        <p>Copyright &copy; 2020 ADVANCE.<br> All rights reserved</p>
     </div>
 </footer>
 <script defer src="src/script/slider.js"></script>

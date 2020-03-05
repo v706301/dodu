@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="css/style.min.css">
     <script src="src/script/jquery.min.js"></script>
     <script defer src="src/script/main.js"></script>
+    <script defer src="src/script/lazy.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="src/slick/slick.css"/>
+    <script type="text/javascript" src="src/slick/slick.min.js"></script>
     <script type="application/ld+json">
      {
         "@context" : "http://schema.org",
@@ -378,16 +382,16 @@
         <p class="why_we_slogan bigger_center">Почему ADVANCE</p>
     </div>
     <div class=why_we_wrapper>
-        <div class="why_container animated fadeInUp">
-            <img data-lazy="src/img/main/lamp.svg" src="/" alt="decoration">
+        <div class="why_container"  data-aos="zoom-in">
+            <img data-lazy="src/img/main/lamp.svg" src="src/img/main/lamp.svg" alt="decoration">
             <p>Мы воплотим в жизнь<br>
                 замысел любой сложности</p>
         </div>
-        <div class="why_container animated fadeInUp delay-500ms">
+        <div class="why_container" data-aos="zoom-in" data-aos-delay="100">
             <img data-lazy="src/img/main/clock.svg" src="/" alt="decoration">
             <p>Мы всегда выполняем<br>заказы в срок</p>
         </div>
-        <div class="why_container why_container animated fadeInUp delay-1000ms">
+        <div class="why_container" data-aos="zoom-in" data-aos-delay="150">
             <img data-lazy="src/img/main/piggy-bank.svg" src="/" alt="decoration">
             <p>Заказав рекламу у нас<br>
                 Вы существенно сэкономите</p>
@@ -436,7 +440,7 @@
     </div>
     <div class="main_our_works_img_wrapper">
         <div class="main_gallery">
-            <div class="gallery_item">
+            <div class="gallery_item" data-aos="zoom-out">
                 <figure class="img-container">
                     <img class="thumb" data-lazy="src/img/main/best/1E1R1841.png"  
                     data-thumb="src/img/main/best/1E1R1841.png" 
@@ -449,7 +453,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="gallery_item long">
+            <div class="gallery_item long" data-aos="zoom-out" data-aos-delay="100">
                 <figure class="img-container">
                     <img class="thumb" data-lazy="src/img/main/best/IMG_0018.jpeg"  
                     data-thumb="src/img/main/best/IMG_0018.jpeg" 
@@ -462,20 +466,20 @@
                     </div>
                 </figure>
             </div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0405.png" src="/" alt="Black Image" />
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="150"><img  data-lazy="src/img/main/best/IMG_0405.png" src="/" alt="Black Image" />
                 <div class="gallery_hover">
                     <h5>333</h5>
                     <p>olololo</p>
                 </div>
             </div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_0991.jpeg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_3366.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_3937.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_4214.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_4228.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_4815.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_6086.jpg" src="/" alt="Black Image" /></div>
-            <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_g5858.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="200"><img  data-lazy="src/img/main/best/IMG_0991.jpeg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="250"><img  data-lazy="src/img/main/best/IMG_3366.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="300"><img  data-lazy="src/img/main/best/IMG_3937.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="350"><img  data-lazy="src/img/main/best/IMG_4214.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="50"><img  data-lazy="src/img/main/best/IMG_4228.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="100"><img  data-lazy="src/img/main/best/IMG_4815.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="150"><img  data-lazy="src/img/main/best/IMG_6086.jpg" src="/" alt="Black Image" /></div>
+            <div class="gallery_item" data-aos="zoom-out" data-aos-delay="200"><img  data-lazy="src/img/main/best/IMG_g5858.jpg" src="/" alt="Black Image" /></div>
         </div>
         <div class="main_gallery hidden_g">
             <div class="gallery_item"><img  data-lazy="src/img/main/best/IMG_6086.jpg" src="/" alt="Black Image" /></div>
@@ -628,6 +632,7 @@
             </div>
             <div class="social_wrapper">
                 <span><a href="#"><img data-lazy="src/img/footer/insta.svg" src="/" alt="instagram icon"></a></span>
+                <span><a href="#"><img data-lazy="src/img/footer/linked.svg" src="/" alt="linkedin icon"></a></span>
                 <span><a href="#"><img data-lazy="src/img/footer/facebook.svg" src="/" alt="facebook icon"></a></span>
             </div>
         </div>
@@ -755,5 +760,9 @@
     })();
 
     </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 </body>
 </html>

@@ -316,7 +316,6 @@ jQuery(document).ready(function($){
             let data = catList[catName];
             $('.change-image').attr('src', data.src);
             $('.menu_subcategory').html(generateHtml(data.links));
-            // $(this).toggleClass('arrowRight');
         }
     });
 
@@ -406,6 +405,8 @@ jQuery(document).ready(function($){
     });
 
     // Img Lazyloading
+
+
     const targets = document.querySelectorAll('img');
 
     const lazyload = target => {
