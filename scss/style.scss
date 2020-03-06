@@ -1571,16 +1571,16 @@ li.menu_category:hover:after{
       flex-direction: column;
 
       div:first-child{
-        width: 41px;
-        transform: translate(0px, 10px) rotate(80deg);
+        width: 82px;
+        transform: translate(-20px, 30px) rotate(65deg);
       }
       div:nth-child(2){
-        width: 80px;
-        transform: translate(-5px, 0px) rotate(25deg);
+        width: 24px;
+        transform: translate(0px, -55px) rotate(25deg);
       }
       div:nth-child(3){
-        width: 20px;
-        transform: translate(20px, 10px) rotate(0deg);
+        width: 65px;
+        transform: translate(-10px, -50px) rotate(30deg)
       }
     }
 }
