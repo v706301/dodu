@@ -199,7 +199,7 @@ input:focus, select:focus, textarea:focus {
   position: relative;
   width: 130px;
   transform: perspective(1px) translateZ(0);
-  transition-duration: 0.3
+  transition-duration: 0.3s;
 }
 
 .phone_list:hover {
@@ -285,7 +285,7 @@ input:focus, select:focus, textarea:focus {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.exodus__ps-shape {
+.exodus_container {
   animation: orbit--lg 8s ease-in-out infinite;
   animation-delay: 0s;
   position: relative;
@@ -295,7 +295,19 @@ input:focus, select:focus, textarea:focus {
   height: 200px;
   z-index: 2;
 }
-.exodus__ps-shape__svg {
+
+.exodus_container2 {
+  animation: orbit--sm 8s ease-in-out infinite;
+  animation-delay: 0s;
+  position: relative;
+  bottom: 5%;
+  right: -2rem;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+.triangle_shape{
   animation: innerOrbit 120s ease-out infinite;
   z-index: 2;
 }
@@ -555,7 +567,7 @@ input:focus, select:focus, textarea:focus {
   width: 10px;
   position: absolute;
   top: -18px;
-  right: -20px;
+  right: -0px;
   display: inline-block;
   }
 .fa {
@@ -1174,10 +1186,12 @@ li.menu_category:hover:after{
     @include WhiteStripes;
     position: relative;
     transform: translateY(100px);
+    width: 620px;
 
     img {
       z-index: 1;
       position: relative;
+      width: 620px;
     }
 
     .menu_services_img_border{
@@ -1292,15 +1306,30 @@ li.menu_category:hover:after{
       position: absolute;
       top: 0;
       right: 0;
+      .exodus_container2{
+        right: 0;
+      }
+      .exodus_triangle {
+        transform: translate(40px, -50px) rotate(155deg);
+      }
+      .tri_little {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        transform: rotate(-45deg);
+      }
 
-      img:first-child{
-        width: 31px;
-        transform: translate(100px, -15px)rotate(75deg);
-      }
-      img:last-child{
-        width: 121px;
-        transform: translate(35px, -60px)rotate(20deg);
-      }
+
+      //НУЖНО ВЫПИЛИТЬ !!!
+
+      //img:first-child{
+      //  width: 31px;
+      //  transform: translate(100px, -15px)rotate(75deg);
+      //}
+      //img:last-child{
+      //  width: 121px;
+      //  transform: translate(35px, -60px)rotate(20deg);
+      //}
     }
 
     .how_we_work_left {
@@ -1332,17 +1361,17 @@ li.menu_category:hover:after{
         flex-direction: column;
         transform: translateY(60%);
 
-        img:first-child{
+        div:first-child{
           width: 82px;
-          transform: translate(-20px, 10px)rotate(60deg);
+          transform: translate(-20px, 30px) rotate(65deg);
       }
-        img:nth-child(2){
+        div:nth-child(2){
           width: 24px;
-          transform: translate(35px, 10px) rotate(29deg);
+          transform: translate(40px, -20px) rotate(40deg);
         }
-        img:nth-child(3){
+        div:nth-child(3){
           width: 65px;
-          transform: translate(-10px,10px) rotate(45deg);
+          transform: translate(-10px, -50px) rotate(30deg)
         }
       }
     }
@@ -1541,15 +1570,15 @@ li.menu_category:hover:after{
       display: flex;
       flex-direction: column;
 
-      img:first-child{
+      div:first-child{
         width: 41px;
         transform: translate(0px, 10px) rotate(80deg);
       }
-      img:nth-child(2){
+      div:nth-child(2){
         width: 80px;
         transform: translate(-5px, 0px) rotate(25deg);
       }
-      img:nth-child(3){
+      div:nth-child(3){
         width: 20px;
         transform: translate(20px, 10px) rotate(0deg);
       }
