@@ -42,6 +42,15 @@ header {
 .exodus_container {
     right: 5rem;
 }
+.main_top_triangles .exodus_container:last-child {
+    right: 0rem;
+    animation: orbit--sm 8s ease-in-out infinite;
+}
+.main_top_triangles .exodus_container:last-child .triangle_shape {
+    animation: innerOrbit2 120s ease-out infinite;
+    width: 115px;
+}
+
 
 .triangle__figure--small img {
     width: 88px;
