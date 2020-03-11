@@ -207,6 +207,7 @@ input:focus, select:focus, textarea:focus {
 }
 .tel_t{
   cursor: pointer;
+  font-size: 20px;
 }
 
 .adv_sm_btn::after, .adv_sm_btn2::after {
@@ -567,7 +568,7 @@ input:focus, select:focus, textarea:focus {
   width: 10px;
   position: absolute;
   top: -18px;
-  right: -0px;
+  right: -20px;
   display: inline-block;
   }
 .fa {
@@ -1178,7 +1179,7 @@ li.menu_category:hover:after{
         transform: translate(50px, 20px);
       }
       .tri_little{
-        transform: translate(150px, -40px) rotate(59deg);
+        transform: translate(150px, -25px) rotate(59deg);
         height: 25px;
         width: 25px;
       }
