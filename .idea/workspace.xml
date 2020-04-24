@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="13cf387c-153c-41e5-820a-4443257968bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/category-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/footer/linked.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/footer/linked.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcategory-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/subcategory-page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +54,7 @@
       <updated>1583501792517</updated>
       <workItem from="1583501793961" duration="6467000" />
       <workItem from="1583590649414" duration="1986000" />
+      <workItem from="1587727835349" duration="11662000" />
     </task>
     <servers />
   </component>
