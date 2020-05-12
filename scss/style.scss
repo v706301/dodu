@@ -673,7 +673,6 @@ input:focus, select:focus, textarea:focus {
 
 .xxx5 {
   border-bottom: none;
-  border-left: none;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0 0 5rem 0;
@@ -2081,6 +2080,11 @@ height: 200px;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   li p {
@@ -2133,7 +2137,7 @@ height: 200px;
     margin: 0 auto;
     left: 4em;
     top: 7em;
-    z-index: 90000;
+    z-index: 9000;
     
     button {
       cursor: pointer;
@@ -2143,17 +2147,22 @@ height: 200px;
       height: 123px;
       background: #F54B19;
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 40px;
-        right: 20px;
-        border-style: solid;
-        border-width: 20.5px 26px 20.5px 0;
-        border-color: transparent #000000 transparent transparent;
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  bottom: 40px;
+      //  right: 20px;
+      //  border-style: solid;
+      //  border-width: 20.5px 26px 20.5px 0;
+      //  border-color: transparent #000000 transparent transparent;
+      //}
+    }
+    button:hover{
+      svg{
+        transform: translateX(-20px);
+        transition: all .2s ease-in-out;
       }
     }
-
   }
   .right_button {
     vertical-align:middle;
@@ -2171,17 +2180,23 @@ height: 200px;
       height: 123px;
       background: #F54B19;
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 40px;
-        right: 15px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20.5px 0 20.5px 26px;
-        border-color: transparent transparent transparent #000000;
-
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  bottom: 40px;
+      //  right: 15px;
+      //  width: 0;
+      //  height: 0;
+      //  border-style: solid;
+      //  border-width: 20.5px 0 20.5px 26px;
+      //  border-color: transparent transparent transparent #000000;
+      //
+      //}
+      }
+    button:hover{
+      svg{
+        transform: translateX(20px);
+        transition: all .2s ease-in-out;
       }
     }
   }
