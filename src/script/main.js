@@ -310,6 +310,7 @@ jQuery(document).ready(function($){
         });
         return '<ul>' + ali.join('') + '</ul>';
     };
+
     $('li.menu_category').on({
         'mouseover': function(){
             let catName = $(this).attr('data-category');

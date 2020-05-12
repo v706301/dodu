@@ -118,6 +118,23 @@
                         <li class="btn" onclick="openCategory(event,'c_test')">POS Материалы</li>
                     </ul>
             </div>
+            <div class="select mob_portfolio">
+                    <ul>
+                        <li values="1" class="option btn" onclick="openCategory(event,'c_brand')">Брендированная одежда</li>
+                        <li values="2" class="option btn" onclick="openCategory(event,'c_test')">Широкоформатная печать</li>
+                        <li values="3" class="option btn" onclick="openCategory(event,'c_exclusive1')">Сувенирная продукция</li>
+                        <li values="4" class="option btn">Корпоративный стиль</li>
+                        <li values="5" class="option btn">Наружная реклама</li>
+                        <li values="6" class="option btn">Оформление интерьеров</li>
+                        <li values="7" class="option btn">Полиграфия</li>
+                        <li values="8" class="option btn">Освещение</li>
+                        <li values="9" class="option btn">Выставочные стенды</li>
+                        <li values="10" class="option btn">Эксклюзив</li>
+                        <li values="11" class="option btn">Дополнительные Услуги</li>
+                        <li values="12" class="option btn">POS Материалы</li>
+                    </ul>
+            </div>
+            </div>
             <div class="works_container">
                 <div class="works_wrapper category" id="c_brand">
                     <div class="img_wrapper" onclick="openModal();currentSlide(1)">
@@ -453,6 +470,12 @@
         // dots[slideIndex-1].className += " active3";
         // captionText.innerHTML = dots[slideIndex-1].alt;
     }
+    //Mobile Select
+    $('.select ul li.option').click(function() {
+        $(this).siblings().addBack().children().remove();
+        var a = $(this).siblings().toggle();
+        $(this).parent().prepend(this);
+    })
 
 </script>
 </html>
